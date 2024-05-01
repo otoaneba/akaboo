@@ -1,0 +1,85 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(253, 249, 243);
+  margin: 0;
+}
+
+.intro {
+  display: flex;
+  padding: 0 3rem;
+  justify-content: center;
+
+}
+
+.product--tagline {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+}
+
+.proposition--container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+}
+
+.value--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15rem;
+  padding: 2.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.font--awesome {
+  padding: 0 0 1rem 0;
+  font-size: 3.5rem;
+}
+
+.product--tutorial {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 4rem;
+}
+
+.step--container {
+  flex-direction: column;
+}
+
+.steps {
+  display: flex;
+  margin-right: 2rem;
+  align-items: center;
+}
+
+.step--count {
+  margin: 1rem 0rem;
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.step--description {
+  padding: 1rem;
+  width: 20rem;
+  text-align: left;
+}
+
+.step--title {
+  margin: 0;
+}
+
+.signUp--buttons {
+  text-align: start;
+
+  
+}
