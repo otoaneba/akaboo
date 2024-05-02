@@ -100,7 +100,7 @@ export default function Intro() {
       </form> */}
          
         </div>
-        <img src="/shopping.png" width="700px"/>
+        {/* <img src="/shopping.png" width="700px"/> */}
     </div>
   )
 }
