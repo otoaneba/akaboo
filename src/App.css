@@ -94,3 +94,44 @@ body {
 .step--title {
   margin: 0;
 }
+
+/* Footer *************************************/
+.footer {
+  margin-top: auto; /* This pushes the footer to the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  color: #2f2f2f;
+  background-color: #FDFBF9;;
+  border-top: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.icon-brand {
+  display: flex;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.legal {
+  margin-top: 20px;
+}

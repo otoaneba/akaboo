@@ -3,6 +3,7 @@ import './App.css'
 import Intro from './components/Intro'
 import ValueProp from './components/ValueProp'
 import ProductTutorial from './components/ProductTutorial'
+import { Footer } from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
      <ProductTutorial process="buying"/>
      {/* <img className="banner" width="700px" src="./sell_banner.jpeg" alt="" /> */}
      <ProductTutorial process="selling"/>
-     <hr></hr>
+     <Footer />
     </>
   )
 }
