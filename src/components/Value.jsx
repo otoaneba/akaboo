@@ -12,23 +12,19 @@ export default function Value(props) {
 	const valueType = props.icon;
 	return (
 		<div className="value--container">
-			{valueType === "environment" && (
+			{valueType === "Sustainability" && (
 				<FontAwesomeIcon icon={faLeaf} className="font--awesome" />
 			)}
-			{valueType === "time" && (
-				<FontAwesomeIcon icon={faClock} className="font--awesome" />
-			)}
-			{valueType === "safety" && (
+			{valueType === "Safety" && (
 				<FontAwesomeIcon
 					icon={faShieldHeart}
 					className="font--awesome"
 				/>
 			)}
-			{valueType === "money" && (
+			{valueType === "Savings" && (
 				<FontAwesomeIcon icon={faCoins} className="font--awesome" />
 			)}
 			<h3>{props.proposition}</h3>
-			<p>Example description of the proposition.</p>
 		</div>
 	);
 }

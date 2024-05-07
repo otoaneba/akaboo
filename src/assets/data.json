@@ -36,8 +36,8 @@
     ]
   ,
   "valueProposition": [
-    {"value": "Sustainability","proposition": ""},
-    {"value": "Safety", "proposition": ""},
-    {"value": "Savings", "proposition": ""}
+    {"value": "Sustainability","proposition": "Sustainability"},
+    {"value": "Safety", "proposition": "Safety"},
+    {"value": "Savings", "proposition": "Savings"}
   ]
 }
