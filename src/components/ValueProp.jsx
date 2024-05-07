@@ -1,12 +1,12 @@
-import React from 'react'
-import Value from './Value'
+import React from "react";
+import Value from "./Value";
 
 export default function ValueProp() {
-  return (
-    <div className= "proposition--container">
-      <Value proposition="Reduce pollution" icon="environment"/>
-      <Value proposition="Save money" icon="money"/>
-      <Value proposition="Save time" icon="time"/>
-    </div>
-  )
+	return (
+		<div className="proposition--container">
+			<Value proposition="Sustainability" icon="environment" />
+			<Value proposition="Safety" icon="safety" />
+			<Value proposition="Savings" icon="money" />
+		</div>
+	);
 }
