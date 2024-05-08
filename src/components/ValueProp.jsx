@@ -4,7 +4,7 @@ import data from "../assets/data.json";
 
 export default function ValueProp() {
   const values = data['valueProposition'].map((item) => (
-		<Value proposition={item.value} icon={item.value}/>
+		<Value key={item.value} proposition={item.value} icon={item.value}/>
 	));
 
 	return (

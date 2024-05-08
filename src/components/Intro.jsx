@@ -10,12 +10,23 @@ import "firebaseui/dist/firebaseui.css";
 import firebase from "firebase/compat/app";
 import * as firebaseui from "firebaseui";
 import { getFunctions, httpsCallable } from "firebase/functions";
+import Modal from "./Modal";
+import modalData from "../assets/modalData";
 
 export default function Intro() {
 	const [userEmail, setUserEmail] = React.useState("");
-	const [temp, setTemp] = React.useState({});
+
 	const functions = getFunctions(app);
 	const sendEmailFunction = httpsCallable(functions, "sendEmail");
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    zipCode: '',
+    ageRange: '',
+    interest: [],
+    categories: []
+});
 
 	React.useEffect(() => {
 		const ui =
@@ -30,7 +41,6 @@ export default function Intro() {
 				console.log("uid", uid);
 			} else {
 				// User is signed out
-				// ...
 				console.log("user is signed out");
 			}
 		});
@@ -77,29 +87,36 @@ export default function Intro() {
 		ui.start("#firebaseui-auth-container", uiConfig);
 	}, []);
 
-	function updateEmail(value) {
-		console.log(value);
-		setUserEmail(value);
-	}
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      if (checked) {
+        // Add to array
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: [...prevState[name], value]
+        }));
+      } else {
+          // Remove from array
+          setFormData(prevState => ({
+              ...prevState,
+              [name]: prevState[name].filter(item => item !== value)
+          }));
+      }
+    } else {
+        setFormData({ ...formData, [name]: value });
+    }
+  };
 
-	async function handleSubmit(e) {
-		e.preventDefault();
-		const newUser = {
-			email: userEmail,
-			createdAt: Date.now(),
-		};
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      setModalOpen(false);
+  };
 
-		const userExists = checkExistingUser(newUser.email);
-		const newUserRef = await addDoc(userCollection, newUser);
-	}
+  const closeModal = () => {
+      setActiveModal(-1);
+  };
 
-	async function checkExistingUser(email) {
-		const querySnapshot = await getDocs(userCollection);
-
-		querySnapshot.forEach((doc) => {
-			console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
-		});
-	}
 
 	return (
 		<div className="intro">
@@ -109,16 +126,25 @@ export default function Intro() {
 					Get exclusive early access to Akaboo, your go-to marketplace
 					for pre-owned baby gear.
 				</p>
+        <button
+        className="openModalBtn"
+        onClick={() => {
+          setModalOpen(true);
+        }}
+      >
+        Open
+      </button>
+      <Modal 
+          isOpen={modalOpen} 
+          closeModal={() => setModalOpen(false)} 
+          handleSubmit={handleSubmit} 
+          handleChange={handleChange} 
+      />
 				<div
 					className="signUp--buttons"
 					id="firebaseui-auth-container"
 				></div>
-				{/* <form onSubmit={handleSubmit}>
-          <input onChange={e => updateEmail(e.target.value)} value={userEmail} type="email" id="email" name="email"></input>
-          <button>Sign Up</button>
-      </form> */}
 			</div>
-			{/* <img src="/shopping.png" width="700px"/> */}
 		</div>
 	);
 }
