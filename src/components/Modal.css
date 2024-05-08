@@ -14,6 +14,10 @@
 
 .modal-content {
     background: white;
+    background-image: url(./yellow.png), url(./blue.png);
+    background-size: 20rem 16rem;
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
     padding: 20px;
     border-radius: 1rem;
     width: 75%;
@@ -27,9 +31,9 @@
 }
 
 .input-box {
-  height: 1.5rem;
-  width: 75%;
-  border-radius: 0.2rem;
+  height: 2rem;
+  width: 60%;
+  border-radius: 0.3rem;
   border: solid 1px gray;
   padding-left: 0.5rem;
   margin-bottom: 1.25rem;
@@ -41,15 +45,19 @@
 
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    background-color: rgb(255, 94, 94);
+    color: rgb(69, 69, 69);
+    border: solid 1px gray;
+    border-radius: 25%;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 fieldset {
   border: solid 1px lightgrey;
-  border-radius: 0.25rem;
+  border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
@@ -113,6 +121,13 @@ select, input {
   cursor: pointer;
 } */
 
-#cancelBtn {
-  background-color: crimson;
+.submit-button {
+  border: solid 1px #f5cac3;
+  background-color: #f5cac3;
+  font-family: 'Inter';
+  color: rgb(76, 76, 76);
+  font-size: large;
+  border-radius: 1rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  padding: 1rem;
 }

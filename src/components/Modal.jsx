@@ -60,7 +60,7 @@ export default function Modal({ isOpen, closeModal, handleSubmit, handleChange }
                             Both
                         </label>
                     </fieldset>
-                    <button type="submit">Secure My Spot!</button>
+                    <button className="submit-button" type="submit">Secure My Spot!</button>
                 </form>
                 <button onClick={closeModal} className="close-button">&times;</button>
             </div>
