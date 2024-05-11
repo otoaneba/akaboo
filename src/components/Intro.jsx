@@ -109,14 +109,30 @@ export default function Intro() {
 		console.log("form", formData);
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		setModalOpen(false);
-	};
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      setModalOpen(false);
+      console.log('form submit')
+      submitForm();
+  };
 
-	const closeModal = () => {
-		setActiveModal(-1);
-	};
+  const closeModal = () => {
+      setActiveModal(-1);
+  };
+
+  async function submitForm() {
+    const newNote = formData;
+    const newNoteRef = await addDoc(userCollection, newNote)
+    setFormData({
+      name: '',
+      email: '',
+      zipCode: '',
+      ageRange: '',
+      interest: [],
+      categories: []
+  })
+}
+
 
 	return (
 		<div className="intro">
