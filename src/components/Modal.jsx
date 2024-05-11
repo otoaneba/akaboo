@@ -12,7 +12,7 @@ export default function Modal({
 		<div className="modal">
 			<div className="modal-content">
 				<form onSubmit={handleSubmit}>
-					<h1>Registration Form</h1>
+					<h1>Join Waitlist</h1>
 					<input
 						className="input-box"
 						type="text"

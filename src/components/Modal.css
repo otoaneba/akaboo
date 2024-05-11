@@ -21,6 +21,7 @@
 	padding: 20px;
 	border-radius: 1rem;
 	width: 75%;
+	position: relative; /* Ensure relative positioning for child elements */
 }
 
 .input-field {
@@ -49,8 +50,8 @@
 	color: rgb(69, 69, 69);
 	border: solid 1px gray;
 	border-radius: 25%;
-	top: 1rem;
-	right: 1rem;
+	top: -1rem; /* Adjust top position */
+	right: -1rem; /* Adjust right position */
 	font-size: 1.5rem;
 	cursor: pointer;
 }
