@@ -14,7 +14,7 @@
 
 .modal-content {
     background: white;
-    background-image: url(./yellow.png), url(./blue.png);
+    background-image: url(/yellow.png), url(/blue.png);
     background-size: 20rem 16rem;
     background-repeat: no-repeat;
     background-position: top right, bottom left;

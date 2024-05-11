@@ -106,6 +106,7 @@ export default function Intro() {
     } else {
         setFormData({ ...formData, [name]: value });
     }
+    console.log('form', formData)
   };
 
   const handleSubmit = (e) => {
