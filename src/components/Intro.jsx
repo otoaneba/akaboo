@@ -18,15 +18,15 @@ export default function Intro() {
 
 	const functions = getFunctions(app);
 	const sendEmailFunction = httpsCallable(functions, "sendEmail");
-  const [modalOpen, setModalOpen] = React.useState(false);
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    zipCode: '',
-    ageRange: '',
-    interest: [],
-    categories: []
-});
+	const [modalOpen, setModalOpen] = React.useState(false);
+	const [formData, setFormData] = React.useState({
+		name: "",
+		email: "",
+		zipCode: "",
+		ageRange: "",
+		interest: [],
+		categories: [],
+	});
 
 	React.useEffect(() => {
 		const ui =
@@ -87,37 +87,36 @@ export default function Intro() {
 		ui.start("#firebaseui-auth-container", uiConfig);
 	}, []);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    if (type === "checkbox") {
-      if (checked) {
-        // Add to array
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: [...prevState[name], value]
-        }));
-      } else {
-          // Remove from array
-          setFormData(prevState => ({
-              ...prevState,
-              [name]: prevState[name].filter(item => item !== value)
-          }));
-      }
-    } else {
-        setFormData({ ...formData, [name]: value });
-    }
-    console.log('form', formData)
-  };
+	const handleChange = (e) => {
+		const { name, value, type, checked } = e.target;
+		if (type === "checkbox") {
+			if (checked) {
+				// Add to array
+				setFormData((prevState) => ({
+					...prevState,
+					[name]: [...prevState[name], value],
+				}));
+			} else {
+				// Remove from array
+				setFormData((prevState) => ({
+					...prevState,
+					[name]: prevState[name].filter((item) => item !== value),
+				}));
+			}
+		} else {
+			setFormData({ ...formData, [name]: value });
+		}
+		console.log("form", formData);
+	};
 
-  const handleSubmit = (e) => {
-      e.preventDefault();
-      setModalOpen(false);
-  };
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setModalOpen(false);
+	};
 
-  const closeModal = () => {
-      setActiveModal(-1);
-  };
-
+	const closeModal = () => {
+		setActiveModal(-1);
+	};
 
 	return (
 		<div className="intro">
@@ -127,20 +126,20 @@ export default function Intro() {
 					Get exclusive early access to Akaboo, your go-to marketplace
 					for pre-owned baby gear.
 				</p>
-        <button
-        className="openModalBtn"
-        onClick={() => {
-          setModalOpen(true);
-        }}
-      >
-        Open
-      </button>
-      <Modal 
-          isOpen={modalOpen} 
-          closeModal={() => setModalOpen(false)} 
-          handleSubmit={handleSubmit} 
-          handleChange={handleChange} 
-      />
+				<button
+					className="openModalBtn"
+					onClick={() => {
+						setModalOpen(true);
+					}}
+				>
+					Join Waitlist
+				</button>
+				<Modal
+					isOpen={modalOpen}
+					closeModal={() => setModalOpen(false)}
+					handleSubmit={handleSubmit}
+					handleChange={handleChange}
+				/>
 				<div
 					className="signUp--buttons"
 					id="firebaseui-auth-container"
