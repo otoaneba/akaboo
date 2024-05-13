@@ -36,3 +36,21 @@ exports.sendWelcomeEmail = functions.auth.user().onCreate((user) => {
     return null;
   }
 });
+
+exports.sendEmail = functions.https.onCall(async (data, context) => {
+  const mailOptions = {
+    from: `Your App <noreply@yourapp.com>`,
+    to: data.email,
+    subject: "Welcome to Akaboo!",
+    text: `Hey ${data.name}, welcome to Akaboo! Your access is confirmed.`,
+  };
+
+  try {
+    await mailTransport.sendMail(mailOptions);
+    console.log("Email sent successfully");
+    return {success: true};
+  } catch (error) {
+    console.error("There was an error while sending the email:", error);
+    return {success: false};
+  }
+});

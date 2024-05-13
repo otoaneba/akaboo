@@ -52,6 +52,16 @@ export default function Intro() {
 		const newNote = formData;
 		setFormData({ ...formData, createdAt: Date.now() });
 		const newNoteRef = await addDoc(userCollection, newNote);
+
+    const sendEmail = httpsCallable(getFunctions(app), 'sendEmail');
+    sendEmail({ email: formData.email, name: formData.name })
+        .then((result) => {
+            console.log('Email sent result:', result.data);
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+        });
+    
 		setFormData({
 			name: "",
 			email: "",
