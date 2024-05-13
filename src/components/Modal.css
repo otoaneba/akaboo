@@ -114,12 +114,3 @@ input {
 	padding: 1rem;
 }
 
-@media (max-width: 400px) {
-  .modal-content {
-      padding: 5px; /* Even smaller padding for very small screens */
-  }
-
-  .input-field, .fieldset, .radio-label {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-  }
-}
