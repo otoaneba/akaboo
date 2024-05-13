@@ -102,10 +102,10 @@ input {
 .submit-button {
 	border: solid 1px #f5cac3;
 	background-color: #f5cac3;
-	font-family: "Inter";
+	font-family: 'Inter';
 	color: rgb(76, 76, 76);
 	font-size: large;
-	border-radius: 1rem;
+	border-radius: 5rem;
 	box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 	padding: 1rem;
 }
