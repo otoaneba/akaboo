@@ -7,9 +7,10 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	z-index: 1000; /* high z-index to ensure it's on top */
 	animation: fadeIn 0.5s;
+  overflow: auto;
 }
 
 .modal-content {
@@ -18,10 +19,13 @@
 	background-size: 20rem 16rem;
 	background-repeat: no-repeat;
 	background-position: top right, bottom left;
-	padding: 20px;
+	padding: 1rem;
 	border-radius: 1rem;
-	width: 75%;
+	width: 85%;
+  margin-top: 1rem;
 	position: relative; /* Ensure relative positioning for child elements */
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .input-field {
@@ -33,7 +37,7 @@
 
 .input-box {
 	height: 2rem;
-	width: 60%;
+	width: 95%;
 	border-radius: 0.3rem;
 	border: solid 1px gray;
 	padding-left: 0.5rem;
@@ -50,8 +54,8 @@
 	color: rgb(69, 69, 69);
 	border: solid 1px gray;
 	border-radius: 25%;
-	top: -1rem; /* Adjust top position */
-	right: -1rem; /* Adjust right position */
+	top: 10px; /* Adjust top position */
+	right: 10px; /* Adjust right position */
 	font-size: 1.5rem;
 	cursor: pointer;
 }
@@ -108,4 +112,14 @@ input {
 	border-radius: 5rem;
 	box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 	padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .modal-content {
+      padding: 5px; /* Even smaller padding for very small screens */
+  }
+
+  .input-field, .fieldset, .radio-label {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
 }
