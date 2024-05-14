@@ -1,15 +1,18 @@
 import React from "react";
 import "./Modal.css";
+import Confetti from 'react-confetti'
 
 export default function Modal({
 	isOpen,
 	closeModal,
 	handleSubmit,
 	handleChange,
+  submitted,
 }) {
 	if (!isOpen) return null;
 	return (
 		<div className="modal">
+      {submitted && <Confetti />}
 			<div className="modal-content">
 				<form onSubmit={handleSubmit}>
 					<h1>Join Waitlist</h1>

@@ -39,10 +39,20 @@ exports.sendWelcomeEmail = functions.auth.user().onCreate((user) => {
 
 exports.sendEmail = functions.https.onCall(async (data, context) => {
   const mailOptions = {
-    from: `Your App <noreply@yourapp.com>`,
+    from: `Akaboo Team <spiceitglobal@gmail.com>`,
     to: data.email,
     subject: "Welcome to Akaboo!",
-    text: `Hey ${data.name}, welcome to Akaboo! Your access is confirmed.`,
+    html: `<h1>Hey ${data.name}, Welcome to Akaboo!</h1>
+    <p>Your access is confirmed. We're excited to have you on board and
+    look forward to offering you the best pre-owned baby gear.</p>
+    <p>Here are some things you can look forward to:</p>
+    <ul>
+      <li>Exclusive early access to our products.</li>
+      <li>Special promotions and discounts.</li>
+      <li>Updates on the latest trends in baby gear.</li>
+    </ul>
+    <p>Thank you for joining us at Akaboo!</p>
+    <p>Best Regards,<br>Akaboo Team</p>`,
   };
 
   try {

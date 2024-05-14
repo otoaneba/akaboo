@@ -4,6 +4,7 @@ import { userCollection, app } from "../firebase";
 import "firebaseui/dist/firebaseui.css";
 import { getFunctions, httpsCallable } from "firebase/functions";
 import Modal from "./Modal";
+import Confetti from 'react-confetti'
 
 export default function Intro() {
 	const [modalOpen, setModalOpen] = React.useState(false);
@@ -15,6 +16,7 @@ export default function Intro() {
 		interest: [],
 		categories: [],
 	});
+  const [FormSubmitted, setFormSubmitted] = React.useState(false);
 
 	const handleChange = (e) => {
 		const { name, value, type, checked } = e.target;
@@ -45,14 +47,18 @@ export default function Intro() {
 	};
 
 	const closeModal = () => {
-		setActiveModal(-1);
+		setModalOpen(false)
+    setFormSubmitted(false)
+    console.log('closing modal', FormSubmitted)
 	};
 
 	async function submitForm() {
 		const newNote = formData;
 		setFormData({ ...formData, createdAt: Date.now() });
 		const newNoteRef = await addDoc(userCollection, newNote);
-
+    // if (newNoteRef?.id) {
+    //   setFormSubmitted(true);
+    // }
     const sendEmail = httpsCallable(getFunctions(app), 'sendEmail');
     sendEmail({ email: formData.email, name: formData.name })
         .then((result) => {
@@ -92,9 +98,10 @@ export default function Intro() {
 				</button>
 				<Modal
 					isOpen={modalOpen}
-					closeModal={() => setModalOpen(false)}
+					closeModal={closeModal}
 					handleSubmit={handleSubmit}
 					handleChange={handleChange}
+          submitted={FormSubmitted}
 				/>
 			</div>
 		</div>
