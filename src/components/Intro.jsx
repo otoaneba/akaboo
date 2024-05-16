@@ -8,6 +8,8 @@ import Confetti from 'react-confetti'
 
 export default function Intro() {
 	const [modalOpen, setModalOpen] = React.useState(false);
+  const [formSubmitted, setFormSubmitted] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 	const [formData, setFormData] = React.useState({
 		name: "",
 		email: "",
@@ -16,7 +18,6 @@ export default function Intro() {
 		interest: [],
 		categories: [],
 	});
-  const [FormSubmitted, setFormSubmitted] = React.useState(false);
 
 	const handleChange = (e) => {
 		const { name, value, type, checked } = e.target;
@@ -41,44 +42,46 @@ export default function Intro() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setModalOpen(false);
 		console.log("form submit");
 		submitForm();
 	};
 
-	const closeModal = () => {
-		setModalOpen(false)
-    setFormSubmitted(false)
-    console.log('closing modal', FormSubmitted)
-	};
-
+  
 	async function submitForm() {
-		const newNote = formData;
-		setFormData({ ...formData, createdAt: Date.now() });
-		const newNoteRef = await addDoc(userCollection, newNote);
-    // if (newNoteRef?.id) {
-    //   setFormSubmitted(true);
-    // }
-    const sendEmail = httpsCallable(getFunctions(app), 'sendEmail');
-    sendEmail({ email: formData.email, name: formData.name })
-        .then((result) => {
-            console.log('Email sent result:', result.data);
-        })
-        .catch((error) => {
-            console.error('Error sending email:', error);
-        });
-    
-		setFormData({
-			name: "",
-			email: "",
-			zipCode: "",
-			ageRange: "",
-			interest: [],
-			categories: [],
-			createdAt: "",
-		});
-		console.log(newNoteRef);
-	}
+    setLoading(true);
+    const newNote = {...formData, createdAt: Date.now()};
+    try {
+      const newNoteRef = await addDoc(userCollection, newNote);
+      console.log("Document added with ID: ", newNoteRef.id)
+      setFormSubmitted(true);
+      const sendEmail = httpsCallable(getFunctions(app), 'sendEmail');
+      await sendEmail({ email: formData.email, name: formData.name })
+    } catch (error) {
+      console.log("Error in submnitting form or sending email: ", error);
+      if (error.code === 'permission-deined') {
+        alert('Permission deined');
+      } else {
+        alert('An error occured. Please try again.')
+      }
+    } finally {
+      setFormData({
+        name: "",
+        email: "",
+        zipCode: "",
+        ageRange: "",
+        interest: [],
+        categories: [],
+        createdAt: "",
+      });
+      setLoading(false);
+    }
+  }
+  
+    const closeModal = () => {
+      setModalOpen(false)
+      setFormSubmitted(false)
+      console.log('closing modal', formSubmitted)
+    };
 
 	return (
 		<div className="intro">
@@ -101,7 +104,8 @@ export default function Intro() {
 					closeModal={closeModal}
 					handleSubmit={handleSubmit}
 					handleChange={handleChange}
-          submitted={FormSubmitted}
+          submitted={formSubmitted}
+          loading={loading}
 				/>
 			</div>
 		</div>

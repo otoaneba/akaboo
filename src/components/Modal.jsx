@@ -8,11 +8,19 @@ export default function Modal({
 	handleSubmit,
 	handleChange,
   submitted,
+  loading,
 }) {
 	if (!isOpen) return null;
 	return (
 		<div className="modal">
-      {submitted && <Confetti />}
+      {submitted ? (
+        <div className="modal-content">
+          <Confetti/>
+          <h1>Thank you!</h1>
+          <p>Your submission has been received.</p>
+          <button onClick={closeModal} className="close-button">&times; Close</button>
+        </div>
+      ) : (
 			<div className="modal-content">
 				<form onSubmit={handleSubmit}>
 					<h1>Join Waitlist</h1>
@@ -138,7 +146,7 @@ export default function Modal({
 							Both
 						</label>
 					</fieldset>
-					<button className="submit-button" type="submit">
+					<button className={`submit-button ${loading ? 'loading' : ''}`} type="submit" disabled={loading}>
 						Secure My Spot!
 					</button>
 				</form>
@@ -169,6 +177,7 @@ export default function Modal({
 					&times;
 				</button>
 			</div>
+      )}
 		</div>
 	);
 }
