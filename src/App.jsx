@@ -5,6 +5,7 @@ import ValueProp from "./components/ValueProp";
 import ProductTutorial from "./components/ProductTutorial";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   const headerRef = useRef(null);
@@ -34,11 +35,13 @@ function App() {
 		<>
       <Header ref={headerRef} onLinkClick={handleLinkClickNew} />
 			<Intro ref={section1Ref}/>
-			<ValueProp ref={section2Ref}/>
+      {/* <hr></hr> */}
+			{/* <ValueProp ref={section2Ref}/> */}
 			{/* <img className="banner" width="700px" src="./buy_banner.jpeg" alt="" /> */}
-			<ProductTutorial process="buying" ref={section3Ref}/>
+			{/* <ProductTutorial process="buying" ref={section3Ref}/> */}
 			{/* <img className="banner" width="700px" src="./sell_banner.jpeg" alt="" /> */}
-			<ProductTutorial process="selling" />
+			{/* <ProductTutorial process="selling" /> */}
+      <HowItWorks ref={section2Ref}/>
 			<Footer />
 		</>
 	);

@@ -12,15 +12,21 @@ body {
 }
 
 .intro {
-  /* margin-top: 3.75rem; */
   display: flex;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
   justify-content: center;
 
   /* Properties for larger screens */
   @media (min-width: 800px) {
     /* background-color: red; */
   }
+}
+
+hr {
+  border: none;
+  background-color: #333;
+  height: 0.1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .openModalBtn {
@@ -147,4 +153,14 @@ body {
 
 .legal {
   margin-top: 20px;
+}
+
+.how--it--works {
+
+    /* Properties for larger screens */
+    @media (min-width: 800px) {
+      display: flex;
+      flex-direction:row;
+      justify-content: center;
+    }
 }
