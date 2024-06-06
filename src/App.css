@@ -12,6 +12,7 @@ body {
 }
 
 .intro {
+  /* margin-top: 3.75rem; */
   display: flex;
   padding: 0 3rem;
   justify-content: center;

@@ -1,0 +1,59 @@
+
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  background:rgba(244, 244, 244, 0.99);;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;  /* Use a high z-index to keep the header above other content */
+  
+}
+
+.header--container {
+  padding: 0.5rem 0;
+}
+
+button {
+  position: relative;
+
+  padding: 0.625rem 1.25rem;
+  color: black; /* Initial text color */
+  font-size: 1rem; /* Set the desired font properties */
+  border: none;
+  background-color: rgba(217, 217, 217, 0);
+  cursor: pointer;
+  overflow: hidden; /* Ensures the ::before content doesn't overflow */
+  border-radius: 1.25rem; /* Optional for rounded corners */
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+
+button:hover {
+  color: #f75138; 
+  /* transition: transform 0.2s ease; */
+}
+
+.button:hover::before {
+  opacity: 1; /* Reveal the background color on hover */
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red; /* Color that will appear on hover */
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out; /* Transition effect using opacity */
+  opacity: 0; /* Initially hide the ::before content */
+}
+
+/* button:hover::before {
+  transform: scaleX(1);
+} */

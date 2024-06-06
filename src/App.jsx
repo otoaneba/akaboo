@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import "./App.css";
 import Intro from "./components/Intro";
 import ValueProp from "./components/ValueProp";
@@ -7,21 +7,32 @@ import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 
 function App() {
-	const [count, setCount] = useState(0);
+  const headerRef = useRef(null);
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
-  const section4Ref = useRef(null);
 
-  const handleLinkClick = (section) => {
-    const ref = { section1: section1Ref, section2: section2Ref, section3: section3Ref }[section];
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
-    console.log('clicked')
-  };
+  // const handleLinkClick = (section) => {
+  //   const ref = { section1: section1Ref, section2: section2Ref, section3: section3Ref }[section];
+  //   ref.current?.scrollIntoView({ behavior: 'smooth' });
+  // };
+
+  const handleLinkClickNew = useCallback((sectionId) => {
+    const sectionRefs = { section1: section1Ref, section2: section2Ref, section3: section3Ref };
+    const ref = sectionRefs[sectionId];
+    if (ref.current) {
+        const headerHeight = headerRef.current.offsetHeight; // Get the height of the header
+        const elementPosition = ref.current.offsetTop;
+        window.scrollTo({
+            top: elementPosition - headerHeight, // Adjust the position
+            behavior: 'smooth'
+        });
+    }
+}, []);
 
 	return (
 		<>
-      <Header onLinkClick={handleLinkClick} />
+      <Header ref={headerRef} onLinkClick={handleLinkClickNew} />
 			<Intro ref={section1Ref}/>
 			<ValueProp ref={section2Ref}/>
 			{/* <img className="banner" width="700px" src="./buy_banner.jpeg" alt="" /> */}
