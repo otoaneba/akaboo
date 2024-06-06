@@ -4,9 +4,8 @@ import { userCollection, app } from "../firebase";
 import "firebaseui/dist/firebaseui.css";
 import { getFunctions, httpsCallable } from "firebase/functions";
 import Modal from "./Modal";
-import Confetti from 'react-confetti'
 
-export default function Intro() {
+ const Intro = React.forwardRef(({ children, style, id }, ref) => {
 	const [modalOpen, setModalOpen] = React.useState(false);
   const [formSubmitted, setFormSubmitted] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
@@ -77,14 +76,14 @@ export default function Intro() {
     }
   }
   
-    const closeModal = () => {
-      setModalOpen(false)
-      setFormSubmitted(false)
-      console.log('closing modal', formSubmitted)
-    };
+  const closeModal = () => {
+    setModalOpen(false)
+    setFormSubmitted(false)
+    console.log('closing modal', formSubmitted)
+  };
 
 	return (
-		<div className="intro">
+		<div className="intro" ref={ref} style={style} id={id}>
 			<div className="product--tagline">
 				<h1>Join the Waitlist</h1>
 				<p>
@@ -110,4 +109,6 @@ export default function Intro() {
 			</div>
 		</div>
 	);
-}
+})
+
+export default Intro

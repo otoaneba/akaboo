@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: rgb(253, 249, 243);
+  /* background-color: rgb(253, 249, 243); */
+  background-color: #F7F3F3;
   color: #213547;
   margin: 0;
 }
@@ -24,8 +25,9 @@ body {
 .openModalBtn {
   padding: 1rem 2rem;
   color:#ffffff;
-  background-color: rgb(26, 154, 245);
-  border: solid 1px rgb(23, 155, 249);
+  /* background-color: rgb(26, 154, 245); */
+  background-color: #CA2500;
+  border: solid 1px #CA2500;
   font-family: 'Inter';
   font-weight: 600;
   border-radius: 5rem;
@@ -60,7 +62,9 @@ body {
   justify-content: space-between;
   width: 15rem;
   padding: 2.5rem;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #F7F3F3;
+
   border-radius: 0.5rem;
 }
 

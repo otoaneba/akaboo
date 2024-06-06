@@ -41,18 +41,44 @@ exports.sendEmail = functions.https.onCall(async (data, context) => {
   const mailOptions = {
     from: `Akaboo Team <spiceitglobal@gmail.com>`,
     to: data.email,
-    subject: "Welcome to Akaboo!",
-    html: `<h1>Hey ${data.name}, Welcome to Akaboo!</h1>
-    <p>Your access is confirmed. We're excited to have you on board and
-    look forward to offering you the best pre-owned baby gear.</p>
-    <p>Here are some things you can look forward to:</p>
-    <ul>
-      <li>Exclusive early access to our products.</li>
-      <li>Special promotions and discounts.</li>
-      <li>Updates on the latest trends in baby gear.</li>
-    </ul>
-    <p>Thank you for joining us at Akaboo!</p>
-    <p>Best Regards,<br>Akaboo Team</p>`,
+    subject: "Welcome to Akaboo - You're on the List!",
+    html: `<h1 style="text-align: center">Hey ${data.name}, 
+    Welcome to Akaboo!</h1>
+    <div style="text-align: center; font-size: 1.25rem; ">
+    <p>Thank you for joining the Akaboo waitlist!
+    We’re thrilled to have 
+    you with us on this exciting journey towards sustainable and responsible 
+    parenting. You’re now part of a community that values quality, 
+    affordability, and environmental consciousness in caring for our 
+    little ones..</p>
+    <br>
+    <p style="font-weight: bold;>What’s Next?</p>
+    <p >You’ll be among the first to know when we launch our platform. 
+    We’ll keep you updated with exclusive sneak peeks, early bird specials, 
+    and more. Plus, we’ll reach out to get your insights and preferences, 
+    which will help us tailor Akaboo to better suit your needs.</p>
+    <br>
+    <p style="font-weight: bold;>Get Involved</p>
+    <p>You’ll be among the first to know when we launch our platform. 
+    We’ll keep you updated with exclusive sneak peeks, early bird specials, 
+    and more. Plus, we’ll reach out to get your insights and preferences, 
+    which will help us tailor Akaboo to better suit your needs.</p>
+    <br>
+    <p style="font-weight: bold;>Spread the Word</p>
+    <p>Think a friend or a family member might be interested in Akaboo? 
+    Help us grow our community by sharing our sign-up link. The more, 
+    the merrier!</p> 
+    <br>
+    <p>Thank you once again for your support and enthusiasm. We can’t 
+    wait to bring you along as we redefine the way parents buy and sell 
+    baby gear. If you have any questions or just want to say hello, feel free 
+    to reply to this email. We love hearing from you!</p>
+    <br>
+    </div>
+    
+    <p>Warm regards,</p>
+    <p>Naoto and Cynthia</p>
+    <p>Founders, Akaboo Team</p>`,
   };
 
   try {
