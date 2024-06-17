@@ -16,7 +16,7 @@
   padding: 0.5rem 0;
 }
 
-button {
+.button {
   position: relative;
 
   padding: 0.625rem 1.25rem;
@@ -31,16 +31,16 @@ button {
   transition: color 0.2s ease-in-out;
 }
 
-button:hover {
+.button:hover {
   color: #f75138; 
   /* transition: transform 0.2s ease; */
 }
 
 .button:hover::before {
-  opacity: 1; /* Reveal the background color on hover */
+  /*opacity: 1; /* Reveal the background color on hover */
 }
 
-button::before {
+.button::before {
   content: "";
   position: absolute;
   position: absolute;

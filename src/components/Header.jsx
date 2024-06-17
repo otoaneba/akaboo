@@ -5,9 +5,9 @@ const Header = forwardRef(({ onLinkClick }, ref) => {
     return (
         <header className="header" ref={ref}>
             <nav className="header--container">
-                <button onClick={() => onLinkClick('section1')}>Section 1</button>
-                <button onClick={() => onLinkClick('section2')}>Section 2</button>
-                <button onClick={() => onLinkClick('section3')}>Section 3</button>
+                <button className="button" onClick={() => onLinkClick('section1')}>Join Us</button>
+                <button className="button" onClick={() => onLinkClick('section2')}>How It Works</button>
+                {/* <button onClick={() => onLinkClick('section3')}>Section 3</button> */}
             </nav>
         </header>
     );

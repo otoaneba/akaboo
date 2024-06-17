@@ -50,14 +50,20 @@
 
 .close-button {
 	position: absolute;
-	background-color: rgb(255, 94, 94);
+	background-color: #CA2500;
 	color: rgb(69, 69, 69);
-	border: solid 1px gray;
+	border: none;
 	border-radius: 25%;
 	top: 10px; /* Adjust top position */
 	right: 10px; /* Adjust right position */
 	font-size: 1.5rem;
 	cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 fieldset {
@@ -104,8 +110,8 @@ input {
 }
 
 .submit-button {
-	border: solid 1px #f75138;
-	background-color: #f75138;
+	border: solid 1px #CA2500;
+	background-color: #CA2500;
 	font-family: 'Inter';
 	color: rgb(255, 255, 255);
 	font-size: large;

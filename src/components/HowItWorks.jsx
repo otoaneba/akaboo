@@ -14,10 +14,9 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
         <VerticalTimeline layout='1-column-right' className="left--column">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: '#f5cac3', color: '#000' }}
+            contentStyle={{ background: '#ffe5d9', color: '#000' }}
             contentArrowStyle={{ borderLeft: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">Browse</h3>
@@ -27,8 +26,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">Order</h3>
@@ -39,8 +37,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">Enjoy</h3>
@@ -58,8 +55,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: '#ffe5d9', color: '#000' }}
             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">Request</h3>
@@ -69,8 +65,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">List & Sell</h3>
@@ -81,8 +76,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(150, 150, 243)', color: '#fff' }}
+            iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faPepperHot} />}
           >
             <h3 className="vertical-timeline-element-title">Get Paid</h3>
