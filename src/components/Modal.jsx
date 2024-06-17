@@ -44,7 +44,7 @@ export default function Modal({
 						className="input-box"
 						type="text"
 						name="zipCode"
-						placeholder="zip code"
+						placeholder="Zip code"
 						onChange={handleChange}
 					/>
 					<fieldset>
@@ -151,7 +151,7 @@ export default function Modal({
 					</button>
 				</form>
 				<p className="privacy-statement" style={{ fontSize: "0.8rem" }}>
-					At Akaboo, your privacy is paramount. We collect your name,
+					At akaboo, your privacy is paramount. We collect your name,
 					email, and other optional details exclusively to enhance
 					your experience and keep you informed about our services.
 					Your data is kept confidential, never sold, and is protected

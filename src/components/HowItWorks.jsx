@@ -11,10 +11,10 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
       <div>
 
         <h2 className="tutorial--title">Buying with akaboo</h2>
-        <VerticalTimeline layout='1-column-right' className="left--column">
+        <VerticalTimeline layout='1-column-right' className="vertical-timeline">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentArrowStyle={{ borderLeft: '7px solid  rgb(33, 150, 243)' }}
+          
             iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />}
           >
@@ -51,7 +51,6 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             // contentStyle={{ background: '#ffe5d9', color: '#000' }}
-            contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faCalendarDays} />}
           >

@@ -11,6 +11,7 @@
 	z-index: 1000; /* high z-index to ensure it's on top */
 	animation: fadeIn 0.5s;
   overflow: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .modal-content {
@@ -26,6 +27,8 @@
 	position: relative; /* Ensure relative positioning for child elements */
   overflow-y: auto;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .input-field {
@@ -33,6 +36,7 @@
 	display: flex;
 	justify-content: start;
 	text-align: start;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .input-box {
@@ -42,6 +46,7 @@
 	border: solid 1px gray;
 	padding-left: 0.5rem;
 	margin-bottom: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .input-label {
@@ -112,7 +117,7 @@ input {
 .submit-button {
 	border: solid 1px #CA2500;
 	background-color: #CA2500;
-	font-family: 'Inter';
+  font-family: 'Montserrat', sans-serif;
 	color: rgb(255, 255, 255);
 	font-size: large;
 	border-radius: 5rem;

@@ -2,6 +2,7 @@
   /* max-width: 1280px; */
   margin: 0;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -45,8 +46,9 @@ hr {
   /* background-color: rgb(26, 154, 245); */
   background-color: #CA2500;
   border: solid 1px #CA2500;
-  font-family: 'Inter';
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
   border-radius: 5rem;
   box-shadow: 0.125rem 0.125rem 0.125rem lightgray;
   margin: 1rem;
@@ -180,7 +182,20 @@ hr {
 }
 
 .logo {
-  outline: 0.1px solid #999;
+  outline: 0.1px solid #cac9c9;
   outline-offset: 5px;
   border-radius: 50%;
+  margin-bottom: 0.75rem;
+}
+
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #424242;
+}
+
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--work .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #1976d2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--education .vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
