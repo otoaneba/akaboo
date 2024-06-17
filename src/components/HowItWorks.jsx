@@ -21,7 +21,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">Browse</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4> */}
             <p>
-            Browse our site for great discounts on top furniture brands. Every piece is inspected, cleaned, and ready for delivery.          </p>
+            Explore our curated selection of pre-owned baby gear. Use filters to find exactly what you need, from strollers to car seats and more. </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -31,8 +31,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">Order</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4> */}
             <p>
-            Using our secure checkout, purchase and select a delivery date. We’ll get in touch to confirm your availability and email an appointment window 2 days before delivery.
-            </p>
+            Select your desired items and place your order with confidence, knowing each product has been quality-checked and meets safety standards.            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -42,8 +41,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">Enjoy</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4> */}
             <p>
-            Our white-glove team will deliver and setup your furniture. All you have to do is sit back and relax. And you can rest easy knowing your purchase helped create a better planet.
-            </p>
+            Receive your purchase at your doorstep and enjoy the benefits of sustainable, affordable, and high-quality baby gear for your little ones.            </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
@@ -60,7 +58,8 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">Request</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4> */}
             <p>
-            Browse our site for great discounts on top furniture brands. Every piece is inspected, cleaned, and ready for delivery.          </p>
+            Sign up and request to list your pre-owned baby gear. Choose between our self-service or full-service options for your convenience.
+            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -70,8 +69,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">List & Sell</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4> */}
             <p>
-            Using our secure checkout, purchase and select a delivery date. We’ll get in touch to confirm your availability and email an appointment window 2 days before delivery.
-            </p>
+            Upload photos, set your price, and provide a detailed description. For full-service, we handle the listing for you, including safety checks and quality assurance.            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -81,8 +79,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
             <h3 className="vertical-timeline-element-title">Get Paid</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4> */}
             <p>
-            Our white-glove team will deliver and setup your furniture. All you have to do is sit back and relax. And you can rest easy knowing your purchase helped create a better planet.
-            </p>
+            Once your item sells, ship it directly to the buyer or let us handle the logistics. Receive your payment securely in your account.            </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

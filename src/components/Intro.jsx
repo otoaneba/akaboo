@@ -84,10 +84,10 @@ import Modal from "./Modal";
 
 	return (
 		<div className="intro" ref={ref} style={style} id={id}>
-			<div className="product--tagline">
-				<h1>Join the Waitlist</h1>
-				<p>
-					Get exclusive early access to Akaboo, your go-to marketplace
+			<div>
+				<h1 className="tagline">Join the Waitlist</h1>
+				<p className="action-call">
+					Get exclusive early access to akaboo, your go-to marketplace
 					for pre-owned baby gear.
 				</p>
 				<button

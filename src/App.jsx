@@ -41,6 +41,7 @@ function App() {
 			{/* <ProductTutorial process="buying" ref={section3Ref}/> */}
 			{/* <img className="banner" width="700px" src="./sell_banner.jpeg" alt="" /> */}
 			{/* <ProductTutorial process="selling" /> */}
+      <h1 className="how--it--works--header">How It Works</h1>
       <HowItWorks ref={section2Ref}/>
 			<Footer />
 		</>
