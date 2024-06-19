@@ -15,10 +15,10 @@ export default function Modal({
 		<div className="modal">
       {submitted ? (
         <div className="modal-content">
-          <Confetti/>
+          <Confetti className="confetti"/>
           <h1>Thank you!</h1>
           <p>Your submission has been received.</p>
-          <button onClick={closeModal} className="close-button">&times; Close</button>
+          <button className="modal-button" onClick={closeModal}>Close</button>
         </div>
       ) : (
 			<div className="modal-content">
@@ -146,7 +146,7 @@ export default function Modal({
 							Both
 						</label>
 					</fieldset>
-					<button className={`submit-button ${loading ? 'loading' : ''}`} type="submit" disabled={loading}>
+					<button className={`modal-button ${loading ? 'loading' : ''}`} type="submit" disabled={loading}>
 						Secure My Spot!
 					</button>
 				</form>

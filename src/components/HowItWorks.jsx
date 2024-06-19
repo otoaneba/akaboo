@@ -13,13 +13,13 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
         <h2 className="tutorial--title">Buying with akaboo</h2>
         <VerticalTimeline layout='1-column-right' className="vertical-timeline">
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-          
+            // contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+            className="vertical-timeline-element--work custom-timeline-element"
+            style={{}}
             iconStyle={{ background: '#a2d2ff', color: '#fff' }}
             icon={<FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />}
           >
             <h3 className="vertical-timeline-element-title">Browse</h3>
-            {/* <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4> */}
             <p>
             Explore our curated selection of pre-owned baby gear. Use filters to find exactly what you need, from strollers to car seats and more. </p>
           </VerticalTimelineElement>
@@ -30,7 +30,7 @@ const HowItWorks = React.forwardRef(({props}, ref) => {
           >
             <h3 className="vertical-timeline-element-title">Order</h3>
             {/* <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4> */}
-            <p>
+            <p className="vertical--element--text--box">
             Select your desired items and place your order with confidence, knowing each product has been quality-checked and meets safety standards.            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
