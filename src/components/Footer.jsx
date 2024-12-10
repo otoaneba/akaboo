@@ -18,7 +18,7 @@ function Footer() {
 				<address>Gothenburg, Sweden</address>
 				<div className="legal">
       
-					<p>&copy; <span><FontAwesomeIcon className="icon" icon={faPepperHot}/>  </span>2024 Spice It Global. All rights reserved.</p>
+					<p>&copy; <span><FontAwesomeIcon className="icon" icon={faPepperHot}/>  </span>2024 Spice IT Global. All rights reserved.</p>
 				</div>
 		</footer>
 	);
