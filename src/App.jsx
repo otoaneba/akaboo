@@ -39,7 +39,7 @@ function App() {
 
 	return (
 		<>
-        <Header ref={headerRef} onLinkClick={handleLinkClickNew} />
+      <Header ref={headerRef} onLinkClick={handleLinkClickNew} />
       <Routes>
         <Route
           path="/"
@@ -48,13 +48,13 @@ function App() {
               <Intro ref={section1Ref} />
               <h1 className="how--it--works--header">How It Works</h1>
               <HowItWorks ref={section2Ref} />
-              <Footer />
+             
             </>
           }
         />
         <Route path="/akatask" element={<AkaTask />} />
       </Routes>
-    
+      <Footer />
       {/* <Header ref={headerRef} onLinkClick={handleLinkClickNew} />
 			<Intro ref={section1Ref}/> */}
       {/* <hr></hr> */}
@@ -66,7 +66,6 @@ function App() {
       {/* <h1 className="how--it--works--header">How It Works</h1>
       <HowItWorks ref={section2Ref}/>
 			<Footer /> */}
-      
 		</>
 	);
 }
