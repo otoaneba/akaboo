@@ -5,7 +5,7 @@ import Intro from "./components/Intro";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import HowItWorks from "./components/HowItWorks";
-import AkaTask from "./components/akaTask";
+import AkaTask from "./components/AkaTask";
 
 function App() {
   const headerRef = useRef(null);
