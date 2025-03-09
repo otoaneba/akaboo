@@ -1,10 +1,10 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLeaf,
 	faCoins,
 	faShieldHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 
 export default function Value(props) {
 	const valueType = props.icon;
@@ -26,3 +26,8 @@ export default function Value(props) {
 		</div>
 	);
 }
+
+Value.propTypes = {
+	icon: PropTypes.string.isRequired,
+	proposition: PropTypes.string.isRequired,
+};

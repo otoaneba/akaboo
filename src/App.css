@@ -1,193 +1,211 @@
 #root {
-  /* max-width: 1280px; */
-  margin: 0;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
+	/* max-width: 1280px; */
+	margin: 0;
+	text-align: center;
 }
 
 body {
-  /* background-color: rgb(253, 249, 243); */
-  background-color: #F7F3F3;
-  color: #213547;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+	background-color: rgb(253, 249, 243);
+	color: #213547;
+	margin: 0;
 }
 
 .intro {
-  display: flex;
-  padding: 2rem 3rem;
-  justify-content: center;
-  background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  padding-bottom: 5rem;
-
-  /* Properties for larger screens */
-  @media (min-width: 800px) {
-    /* background-color: red; */
-  }
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 4rem 1rem;
 }
 
 .tagline {
-  font-size: 4.5rem;
-  margin-bottom: 0;
+	font-family: "PP Editorial New", serif;
+	font-size: 3.5rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+	max-width: 800px;
 }
 
-hr {
-  border: none;
-  background-color: #333;
-  height: 0.1px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+.action-call {
+	font-size: 1.2rem;
+	color: #666;
+	max-width: 600px;
+	margin-bottom: 2rem;
 }
 
 .openModalBtn {
-  padding: 1rem 2rem;
-  color:#ffffff;
-  /* background-color: rgb(26, 154, 245); */
-  background-color: #CA2500;
-  border: solid 1px #CA2500;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 5rem;
-  box-shadow: 0.125rem 0.125rem 0.125rem lightgray;
-  margin: 1rem;
-  cursor: pointer;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	padding: 1rem 2.5rem;
+	border-radius: 2rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .signUp--buttons {
-  text-align: start;
+	text-align: start;
 }
 
 .proposition--container {
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: rgb(255, 255, 255); */
-
-  /* Properties for larger screens */
-  @media (min-width: 800px) {
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-  }
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	padding: 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
 }
 
 .value--container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 15rem;
-  padding: 2.5rem;
-  /* background-color: rgb(255, 255, 255); */
-  background-color: #F7F3F3;
-
-  border-radius: 0.5rem;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	text-align: left;
 }
 
 .font--awesome {
-  padding: 0 0 1rem 0;
-  font-size: 3.5rem;
+	padding: 0 0 1rem 0;
+	font-size: 3.5rem;
 }
 
 .product--tutorial {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0rem 4rem;
+	margin: 0;
+	padding: 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
 }
 
 .step--container {
-  flex-direction: column;
+	flex-direction: column;
 }
 
 .steps {
-  display: flex;
-  margin-right: 2rem;
-  align-items: center;
+	display: flex;
+	margin-right: 2rem;
+	align-items: center;
 }
 
 .step--count {
-  margin: 1rem 0rem;
-  font-size: 3.5rem;
-  padding-bottom: 2rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 1rem 0rem;
+	font-size: 3.5rem;
+	padding-bottom: 2rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .step--description {
-  padding: 1rem;
-  width: 20rem;
-  text-align: left;
+	padding: 1rem;
+	width: 20rem;
+	text-align: left;
 }
 
 .step--title {
-  margin: 0;
-}
-
-.how--it--works--header {
-  font-size: 4rem;
+	margin: 0;
 }
 
 /* Footer *************************************/
 .footer {
-  margin-top: auto; /* This pushes the footer to the bottom */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 1rem;
-  color: #2f2f2f;
-  background-color: #FDFBF9;;
-  border-top: 1px solid #e5e5e5;
-  width: 100%;
+	margin-top: auto; /* This pushes the footer to the bottom */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 1rem;
+	color: #2f2f2f;
+	background-color: #fdfbf9;
+	border-top: 1px solid #e5e5e5;
+	width: 100%;
 }
 
 .icon-brand {
-  display: flex;
+	display: flex;
 }
 
 .navbar-brand {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .footer-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px;
-  max-width: max-content;
-  background-color: rgb(33, 33, 33, 0.07);
-  border-radius: 100px;
-  color: #2f2f2f;
-  line-height: 0;
-  margin: 0.6em 0;
-  font-size: 1rem;
-  padding: 0 1.3em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	max-width: max-content;
+	background-color: rgb(33, 33, 33, 0.07);
+	border-radius: 100px;
+	color: #2f2f2f;
+	line-height: 0;
+	margin: 0.6em 0;
+	font-size: 1rem;
+	padding: 0 1.3em;
 }
 
 .legal {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
-.how--it--works {
-
-    /* Properties for larger screens */
-    @media (min-width: 800px) {
-      display: flex;
-      flex-direction:row;
-      justify-content: center;
-    }
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
-.logo {
-  outline: 0.1px solid #cac9c9;
-  outline-offset: 5px;
-  border-radius: 50%;
-  margin-bottom: 0.75rem;
+main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+	padding: 4rem 2rem;
 }
 
-.vertical-timeline-element--work:hover {
-  
+.tutorials-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 4rem;
+	padding: 2rem;
+	background-color: #ffeb3b;
+	border-radius: 1rem;
+}
+
+.tutorial--title {
+	font-family: "PP Editorial New", serif;
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	text-align: left;
+}
+
+.akatask-section {
+	padding: 4rem 2rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	margin: 2rem 0;
+}
+
+.akatask-content {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Add decorative elements */
+.geometric-pattern {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 300px;
+	background-image: url("/pattern.svg");
+	opacity: 0.1;
+	z-index: -1;
+}
+
+@media (min-width: 800px) {
+	.tagline {
+		font-size: 4.5rem;
+	}
+
+	.tutorials-section {
+		grid-template-columns: 1fr 1fr;
+	}
 }

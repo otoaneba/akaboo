@@ -1,22 +1,42 @@
-import React, { forwardRef } from 'react';
-import { Link } from 'react-router-dom';
-import "./Header.css"
+import "./Header.css";
 
-const Header = forwardRef(({ onLinkClick }, ref) => {
-    return (
-      <>
-        <header className="header" ref={ref}>
-          <Link to="/">
-            <img className="header--logo" src="./akaboo.png" width='200px' alt="Home" />
-          </Link>
-            <nav className="header--container">
-                <button className="button" onClick={() => onLinkClick('section0')}>akaTask App</button>
-                <button className="button" onClick={() => onLinkClick('section1')}>Join Waitlist</button>
-                <button className="button" onClick={() => onLinkClick('section2')}>How It Works</button>
-            </nav>
-        </header>
-      </>
-    );
-});
+function Header() {
+	const scrollToSection = (sectionId) => {
+		const element = document.getElementById(sectionId);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
+	return (
+		<header className="header">
+			<div className="header-content">
+				<div className="logo">
+					<img src="./akaboo.png" alt="Akaboo logo" />
+				</div>
+				<nav className="nav-links">
+					<button onClick={() => scrollToSection("intro")}>
+						Home
+					</button>
+					<button onClick={() => scrollToSection("value-prop")}>
+						About
+					</button>
+					<button onClick={() => scrollToSection("buying")}>
+						Services
+					</button>
+					<button onClick={() => scrollToSection("akatask")}>
+						Resources
+					</button>
+				</nav>
+				<button
+					className="cta-button"
+					onClick={() => scrollToSection("contact")}
+				>
+					Book Now
+				</button>
+			</div>
+		</header>
+	);
+}
 
 export default Header;

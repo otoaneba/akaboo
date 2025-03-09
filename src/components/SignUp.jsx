@@ -11,7 +11,7 @@ export default function SignUp() {
 	React.useEffect(() => {
 		const ui =
 			firebaseui.auth.AuthUI.getInstance() ||
-			new firebaseui.auth.AuthUI(getAuth(app));
+			new firebaseui.auth.AuthUI(getAuth());
 		const auth = getAuth();
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
@@ -40,10 +40,7 @@ export default function SignUp() {
 			],
 			credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO,
 			callbacks: {
-				signInSuccessWithAuthResult: function (
-					authResult,
-					redirectUrl
-				) {
+				signInSuccessWithAuthResult: function (authResult) {
 					if (
 						authResult.user &&
 						authResult.additionalUserInfo.isNewUser

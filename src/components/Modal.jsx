@@ -1,183 +1,142 @@
-import React from "react";
 import "./Modal.css";
-import Confetti from 'react-confetti'
+import PropTypes from "prop-types";
 
 export default function Modal({
 	isOpen,
 	closeModal,
 	handleSubmit,
 	handleChange,
-  submitted,
-  loading,
+	submitted,
+	loading,
 }) {
 	if (!isOpen) return null;
+
 	return (
 		<div className="modal">
-      {submitted ? (
-        <div className="modal-content">
-          <Confetti className="confetti"/>
-          <h1>Thank you!</h1>
-          <p>Your submission has been received.</p>
-          <button className="modal-button" onClick={closeModal}>Close</button>
-        </div>
-      ) : (
-			<div className="modal-content">
-				<form onSubmit={handleSubmit}>
-					<h1>Join Waitlist</h1>
-					<input
-						className="input-box"
-						type="text"
-						name="name"
-						placeholder="Your name"
-						onChange={handleChange}
-						required
-					/>
-					<input
-						className="input-box"
-						type="email"
-						name="email"
-						placeholder="Email"
-						onChange={handleChange}
-						required
-					/>
-					<input
-						className="input-box"
-						type="text"
-						name="zipCode"
-						placeholder="Zip code"
-						onChange={handleChange}
-					/>
-					<fieldset>
-						<legend>Child’s Age Range (Optional):</legend>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="ageRange"
-								value="buy"
-								onChange={handleChange}
-							/>
-							0-2
-						</label>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="ageRange"
-								value="sell"
-								onChange={handleChange}
-							/>
-							3-5
-						</label>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="ageRange"
-								value="both"
-								onChange={handleChange}
-							/>
-							6-10
-						</label>
-					</fieldset>
-					<fieldset>
-						<legend>Categories to Buy or Sell (Optional):</legend>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="categories"
-								value="stroller"
-								onChange={handleChange}
-							/>
-							Stroller
-						</label>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="categories"
-								value="car seat"
-								onChange={handleChange}
-							/>
-							Car Seat
-						</label>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="categories"
-								value="carrier"
-								onChange={handleChange}
-							/>
-							Carrier
-						</label>
-						<label className="radio-label">
-							<input
-								type="checkbox"
-								name="categories"
-								value="crib"
-								onChange={handleChange}
-							/>
-							Crib
-						</label>
-					</fieldset>
-					<fieldset>
-						<legend>Interest in (Optional):</legend>
-						<label className="radio-label">
-							<input
-								type="radio"
-								name="interest"
-								value="buy"
-								onChange={handleChange}
-							/>
-							Buy
-						</label>
-						<label className="radio-label">
-							<input
-								type="radio"
-								name="interest"
-								value="sell"
-								onChange={handleChange}
-							/>
-							Sell
-						</label>
-						<label className="radio-label">
-							<input
-								type="radio"
-								name="interest"
-								value="both"
-								onChange={handleChange}
-							/>
-							Both
-						</label>
-					</fieldset>
-					<button className={`modal-button ${loading ? 'loading' : ''}`} type="submit" disabled={loading}>
-						Secure My Spot!
+			{submitted ? (
+				<div className="modal-content">
+					<div className="success-message">
+						<h2>Thank you for joining!</h2>
+						<p>
+							We&apos;re excited to have you on board. Check your
+							email for confirmation and next steps.
+						</p>
+						<button className="modal-button" onClick={closeModal}>
+							Close
+						</button>
+					</div>
+					<button onClick={closeModal} className="close-button">
+						×
 					</button>
-				</form>
-				<p className="privacy-statement" style={{ fontSize: "0.8rem" }}>
-					At akaboo, your privacy is paramount. We collect your name,
-					email, and other optional details exclusively to enhance
-					your experience and keep you informed about our services.
-					Your data is kept confidential, never sold, and is protected
-					with robust security measures. You may update or delete your
-					information anytime by contacting us.
-					<br />
-					By submitting this form, you agree to our data practices as
-					described in our{" "}
-					<a
-						href="https://cynthiali-abe.notion.site/Privacy-Statement-2fd620cdb08343adbd11c9e45bb8e0ff?pvs=4"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						full Privacy Policy
-					</a>
-					. For any concerns, reach out to{" "}
-					<a href="mailto:spiceitglobal@gmail.com">
-						spiceitglobal@gmail.com
-					</a>
-					.
-				</p>
-				<button onClick={closeModal} className="close-button">
-					&times;
-				</button>
-			</div>
-      )}
+				</div>
+			) : (
+				<div className="modal-content">
+					<h2 className="modal-title">Join Our Community</h2>
+					<form onSubmit={handleSubmit}>
+						<div className="input-field">
+							<label className="input-label" htmlFor="name">
+								Name
+							</label>
+							<input
+								className="input-box"
+								type="text"
+								name="name"
+								id="name"
+								onChange={handleChange}
+								required
+							/>
+						</div>
+						<div className="input-field">
+							<label className="input-label" htmlFor="email">
+								Email
+							</label>
+							<input
+								className="input-box"
+								type="email"
+								name="email"
+								id="email"
+								onChange={handleChange}
+								required
+							/>
+						</div>
+						<div className="input-field">
+							<label className="input-label" htmlFor="zipCode">
+								Zip Code
+							</label>
+							<input
+								className="input-box"
+								type="text"
+								name="zipCode"
+								id="zipCode"
+								onChange={handleChange}
+								required
+							/>
+						</div>
+						<fieldset>
+							<legend>I am interested in:</legend>
+							<label className="radio-label">
+								<input
+									type="checkbox"
+									name="interest"
+									value="buying"
+									onChange={handleChange}
+								/>
+								Buying
+							</label>
+							<label className="radio-label">
+								<input
+									type="checkbox"
+									name="interest"
+									value="selling"
+									onChange={handleChange}
+								/>
+								Selling
+							</label>
+							<label className="radio-label">
+								<input
+									type="checkbox"
+									name="interest"
+									value="both"
+									onChange={handleChange}
+								/>
+								Both
+							</label>
+						</fieldset>
+						<button
+							className={`modal-button ${
+								loading ? "loading" : ""
+							}`}
+							type="submit"
+							disabled={loading}
+						>
+							{loading ? "Processing..." : "Secure My Spot!"}
+						</button>
+					</form>
+					<p className="privacy-statement">
+						By submitting this form, you agree to our{" "}
+						<a
+							href="https://cynthiali-abe.notion.site/Privacy-Statement-2fd620cdb08343adbd11c9e45bb8e0ff?pvs=4"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Privacy Policy
+						</a>
+						. We&apos;ll handle your information with care.
+					</p>
+					<button onClick={closeModal} className="close-button">
+						×
+					</button>
+				</div>
+			)}
 		</div>
 	);
 }
+
+Modal.propTypes = {
+	isOpen: PropTypes.bool.isRequired,
+	closeModal: PropTypes.func.isRequired,
+	handleSubmit: PropTypes.func.isRequired,
+	handleChange: PropTypes.func.isRequired,
+	submitted: PropTypes.bool.isRequired,
+	loading: PropTypes.bool.isRequired,
+};
