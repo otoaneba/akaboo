@@ -171,6 +171,12 @@ main {
 	line-height: 1.6;
 }
 
+.benefits-with-images .cta-button {
+	display: inline-block;
+	margin: 2rem auto;
+	width: fit-content;
+}
+
 /* How It Works Section */
 .how-it-works {
 	margin: 0;

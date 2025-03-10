@@ -160,13 +160,13 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 							</div>
 						</div>
 					</div>
+					<button
+						className="cta-button secondary"
+						onClick={() => setModalOpen(true)}
+					>
+						Join the Waitlist
+					</button>
 				</div>
-				<button
-					className="cta-button secondary"
-					onClick={() => setModalOpen(true)}
-				>
-					Join the Waitlist
-				</button>
 			</div>
 
 			<Modal
