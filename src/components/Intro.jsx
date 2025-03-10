@@ -82,21 +82,33 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 	return (
 		<div className="intro" ref={ref} id="intro">
 			<div className="geometric-pattern"></div>
-			<h1 className="tagline">
-				Transform Your Life With The Guidance Of A Certified Life Coach
-			</h1>
+			<h1 className="tagline">Transform How You Buy & Sell Baby Gear</h1>
 			<p className="action-call">
-				Take the first step towards a better life. Start your journey
-				with personalized coaching that empowers you to reach your full
-				potential.
+				Join the smart parenting revolution. Use AI-powered tools to buy
+				and sell pre-loved baby gear safely, sustainably, and
+				profitably.
 			</p>
 			<div className="cta-buttons">
 				<button
 					className="openModalBtn"
 					onClick={() => setModalOpen(true)}
 				>
-					Join Waitlist
+					Get Started for Free
 				</button>
+			</div>
+			<div className="benefits-grid">
+				<div className="benefit-item">
+					<h3>Sustainability</h3>
+					<p>Give baby gear a second life</p>
+				</div>
+				<div className="benefit-item">
+					<h3>Safety</h3>
+					<p>Verified pre-owned gear</p>
+				</div>
+				<div className="benefit-item">
+					<h3>Savings</h3>
+					<p>Smart deals for smart parents</p>
+				</div>
 			</div>
 			<Modal
 				isOpen={modalOpen}

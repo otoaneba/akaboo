@@ -8,12 +8,11 @@ import AkaTask from "./components/AkaTask";
 
 function App() {
 	const introRef = useRef(null);
-	const buyingRef = useRef(null);
-	const sellingRef = useRef(null);
+	const howItWorksRef = useRef(null);
+	const featuresRef = useRef(null);
 	const akaTaskRef = useRef(null);
 
 	const [modalOpen, setModalOpen] = useState(false);
-
 	const openModal = () => setModalOpen(true);
 
 	return (
@@ -26,11 +25,19 @@ function App() {
 						modalOpen={modalOpen}
 						setModalOpen={setModalOpen}
 					/>
-					<div className="tutorials-section">
-						<ProductTutorial process="buying" ref={buyingRef} />
-						<ProductTutorial process="selling" ref={sellingRef} />
-					</div>
-					<AkaTask ref={akaTaskRef} id="akatask" />
+					<ProductTutorial
+						process="selling"
+						ref={howItWorksRef}
+						id="how-it-works"
+						title="How It Works"
+					/>
+					<ProductTutorial
+						process="features"
+						ref={featuresRef}
+						id="features"
+						title="Features"
+					/>
+					<AkaTask ref={akaTaskRef} id="resources" />
 				</main>
 			</div>
 			<Footer />
