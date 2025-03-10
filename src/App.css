@@ -75,7 +75,22 @@ main {
 
 /* Why Akaboo Section */
 .why-akaboo {
-	margin-bottom: 6rem;
+	margin: 0;
+	padding: 6rem 0;
+	background-color: #f2eee8;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.why-akaboo > * {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 2rem;
 }
 
 .why-akaboo h2 {
@@ -155,8 +170,22 @@ main {
 
 /* How It Works Section */
 .how-it-works {
+	margin: 0;
 	padding: 6rem 0;
-	background-color: #fff;
+	background-color: #e5ddd2;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.how-it-works > * {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 2rem;
 }
 
 .steps-grid {
@@ -487,7 +516,7 @@ main {
 }
 
 .modal-content {
-	background: white;
+	background: #faf6f1;
 	padding: 3rem;
 	border-radius: 1.5rem;
 	width: 90%;
@@ -498,20 +527,21 @@ main {
 }
 
 .modal-title {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	margin-bottom: 2rem;
 	text-align: center;
+	color: #1a1a1a;
 }
 
 .input-field {
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
 
 .input-label {
 	display: block;
-	font-size: 1rem;
-	color: #666;
-	margin-bottom: 0.5rem;
+	font-size: 1.1rem;
+	color: #1a1a1a;
+	margin-bottom: 0.75rem;
 	text-align: left;
 }
 
@@ -519,19 +549,53 @@ main {
 	width: 100%;
 	padding: 1rem;
 	border: 1px solid #ddd;
-	border-radius: 0.5rem;
+	border-radius: 0.75rem;
 	font-size: 1rem;
+	background-color: white;
 	transition: border-color 0.3s;
 }
 
 .input-box:focus {
 	outline: none;
-	border-color: #000;
+	border-color: #8b5e3c;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 2rem 0;
+}
+
+fieldset legend {
+	font-size: 1.1rem;
+	color: #1a1a1a;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.radio-label {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background-color: white;
+	border-radius: 0.75rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.radio-label:hover {
+	background-color: #f2eee8;
+}
+
+.radio-label input[type="checkbox"] {
+	margin-top: 0.25rem;
 }
 
 .modal-button {
 	width: 100%;
-	background-color: #000;
+	background-color: #8b5e3c;
 	color: #fff;
 	border: none;
 	padding: 1rem;
@@ -539,21 +603,29 @@ main {
 	font-size: 1.1rem;
 	cursor: pointer;
 	transition: background-color 0.3s;
+	margin: 1.5rem 0;
 }
 
 .modal-button:hover {
 	background-color: #333;
 }
 
-.modal-button.loading {
-	background-color: #666;
-	cursor: not-allowed;
+.privacy-statement {
+	font-size: 0.9rem;
+	color: #666;
+	text-align: center;
+	margin-top: 1.5rem;
+}
+
+.privacy-statement a {
+	color: #8b5e3c;
+	text-decoration: underline;
 }
 
 .close-button {
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	top: 1.5rem;
+	right: 1.5rem;
 	background: none;
 	border: none;
 	font-size: 1.5rem;
@@ -565,6 +637,21 @@ main {
 
 .close-button:hover {
 	color: #000;
+}
+
+.success-message {
+	text-align: center;
+}
+
+.success-message h2 {
+	font-size: 2rem;
+	color: #1a1a1a;
+	margin-bottom: 1rem;
+}
+
+.success-message p {
+	color: #666;
+	margin-bottom: 2rem;
 }
 
 /* Media Queries */
