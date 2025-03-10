@@ -104,7 +104,7 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 			</div>
 
 			<div className="why-akaboo">
-				<h2>Why Akaboo?</h2>
+				<h2>Why akaboo?</h2>
 				<p>
 					Parents spend thousands on baby gear that&apos;s barely
 					used. We make reselling easy with AI-driven pricing, smart
