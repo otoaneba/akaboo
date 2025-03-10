@@ -247,7 +247,7 @@ main {
 	border-radius: 2rem;
 	font-size: 1.1rem;
 	cursor: pointer;
-	margin-top: 2rem;
+	margin: 2rem;
 }
 
 .cta-button:hover {
@@ -429,7 +429,7 @@ main {
 	background-color: rgba(255, 255, 255, 0.9);
 	backdrop-filter: blur(10px);
 	z-index: 1000;
-	padding: 1rem 2rem;
+	padding: 0rem 2rem;
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -445,7 +445,7 @@ main {
 }
 
 .logo img {
-	height: 40px;
+	height: 60px;
 	flex-shrink: 0;
 }
 
@@ -598,4 +598,9 @@ main {
 	to {
 		opacity: 1;
 	}
+}
+
+/* Adjust header button alignment */
+.header-content .cta-button {
+	align-self: center;
 }

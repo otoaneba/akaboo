@@ -26,7 +26,7 @@ function Header({ openModal }) {
 					</button>
 				</nav>
 				<button className="cta-button" onClick={openModal}>
-					Join Waitlist
+					Join the Waitlist
 				</button>
 			</div>
 		</header>
