@@ -9,7 +9,7 @@ const AkaTask = React.forwardRef((props, ref) => {
 					<div className="akatask-text">
 						<h2>Try Our Free Activity Planner</h2>
 						<p>
-							AkaTask is designed to make parenting easier by
+							akaTask is designed to make parenting easier by
 							providing personalized activity suggestions for your
 							kids. Download it today and discover endless fun and
 							learning opportunities!
@@ -23,7 +23,7 @@ const AkaTask = React.forwardRef((props, ref) => {
 							}}
 							className="cta-button"
 						>
-							📲 Download AkaTask now
+							📲 Download akaTask now
 						</button>
 					</div>
 					<div className="app-screenshots">

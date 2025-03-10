@@ -133,7 +133,7 @@ main {
    ========================================================================== */
 .why-akaboo {
 	background-color: var(--color-background-alt);
-	padding: var(--spacing-3xl) 0;
+	padding: var(--spacing-lg) 0;
 }
 
 .why-akaboo > * {
@@ -166,7 +166,7 @@ main {
 
 .benefits-with-images .cta-button {
 	display: inline-block;
-	margin: var(--spacing-lg) auto;
+	margin: 0 auto;
 	width: fit-content;
 }
 
@@ -224,13 +224,14 @@ main {
    ========================================================================== */
 .how-it-works {
 	background-color: var(--color-background);
-	padding: var(--spacing-3xl) 0;
+	padding: 0;
 	position: relative;
 	overflow: hidden;
 }
 
 .how-it-works h2 {
 	font-size: var(--font-size-2xl);
+	margin-bottom: var(--spacing-md);
 }
 
 .how-it-works > * {
@@ -670,20 +671,22 @@ fieldset legend {
 	}
 
 	/* Benefits Section */
+	.benefit-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.benefit-content {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			"image"
-			"text";
-		gap: var(--spacing-md);
+		display: block;
+	}
+
+	.benefit-image {
+		display: none;
 	}
 
 	.benefit-text {
 		text-align: center;
-	}
-
-	.benefit-image {
-		height: 250px;
 	}
 
 	/* AkaTask Section */
@@ -766,4 +769,67 @@ fieldset legend {
 	background-image: url("/pattern.svg");
 	opacity: 0.1;
 	z-index: -1;
+}
+
+/* ==========================================================================
+   Testimonials Section
+   ========================================================================== */
+.testimonials {
+	margin: var(--spacing-lg) auto;
+	max-width: var(--content-width);
+	padding: var(--spacing-lg);
+	text-align: center;
+}
+
+.testimonials-title {
+	font-size: var(--font-size-2xl);
+	margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-carousel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.testimonial {
+	background: white;
+	border-radius: var(--border-radius);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	padding: var(--spacing-lg);
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	margin: 0 var(--spacing-lg);
+}
+
+.testimonial img {
+	width: 100%;
+	height: auto;
+	border-radius: var(--border-radius);
+	margin-bottom: var(--spacing-md);
+}
+
+.testimonial p {
+	font-size: var(--font-size-base);
+	color: var(--color-text-light);
+	margin-bottom: var(--spacing-sm);
+}
+
+.testimonial cite {
+	font-size: var(--font-size-sm);
+	color: var(--color-text);
+}
+
+.testimonial:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 2rem;
+	color: var(--color-primary);
+	margin: 0 var(--spacing-lg);
 }

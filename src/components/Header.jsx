@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Header({ openModal }) {
+function Header() {
 	const scrollToSection = (sectionId) => {
 		const element = document.getElementById(sectionId);
 		if (element) {
@@ -25,9 +25,6 @@ function Header({ openModal }) {
 						Resources
 					</button>
 				</nav>
-				<button className="cta-button" onClick={openModal}>
-					Join the Waitlist
-				</button>
 			</div>
 		</header>
 	);
