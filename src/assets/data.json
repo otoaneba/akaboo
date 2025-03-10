@@ -1,43 +1,58 @@
 {
-  "buying": [
-      {
-        "step": "1",
-        "value": "Browse",
-        "proposition": "Browse our site for great discounts on top furniture brands. Every piece is inspected, cleaned, and ready for delivery."
-      },
-      {
-        "step": "2",
-        "value": "Order",
-        "proposition": "Using our secure checkout, purchase and select a delivery date. We’ll get in touch to confirm your availability and email an appointment window 2 days before delivery."
-      },
-      {
-        "step": "3",
-        "value": "Enjoy",
-        "proposition": "Our white-glove team will deliver and setup your furniture. All you have to do is sit back and relax. And you can rest easy knowing your purchase helped create a better planet."
-      }
-    ]
-  ,
-  "selling": [
-      {
-        "step": "1",
-        "value": "Submit",
-        "proposition": "Use are free and easy-to-use form to submit your gear you want to sel. Our team will review and confirm your submission within one business day. We’re focused on keeping durable, top-quality baby gear out of landfills and in people’s homes, so we are selective about what we’ll accept"
-      },
-      {
-        "step": "2",
-        "value": "Hand-off",
-        "proposition": "Pick a convenient date and time and we’ll come pick up your furniture free of charge—no need to hold onto it until it sells. Then we’ll store it, clean it, and deliver it to the buyer. All for free."
-      },
-      {
-        "step": "3",
-        "value": "Get Paid",
-        "proposition": "Sit back and relax. We do all the work necessary to get the most value out of your furniture. When your item sells, you’ll earn a revenue share based on the final resale price of your item."
-      }
-    ]
-  ,
-  "valueProposition": [
-    {"value": "Sustainability","proposition": "Sustainability"},
-    {"value": "Safety", "proposition": "Safety"},
-    {"value": "Savings", "proposition": "Savings"}
-  ]
+	"buying": [
+		{
+			"step": "1",
+			"value": "Browse",
+			"proposition": "Browse our site for great discounts on top furniture brands. Every piece is inspected, cleaned, and ready for delivery."
+		},
+		{
+			"step": "2",
+			"value": "Order",
+			"proposition": "Using our secure checkout, purchase and select a delivery date. We'll get in touch to confirm your availability and email an appointment window 2 days before delivery."
+		},
+		{
+			"step": "3",
+			"value": "Enjoy",
+			"proposition": "Our white-glove team will deliver and setup your furniture. All you have to do is sit back and relax. And you can rest easy knowing your purchase helped create a better planet."
+		}
+	],
+	"selling": [
+		{
+			"step": "1",
+			"value": "Snap a Photo",
+			"proposition": "Use our smart photo & image recognition technology to instantly analyze and catalog your baby gear."
+		},
+		{
+			"step": "2",
+			"value": "Get a Price Estimate",
+			"proposition": "Our AI-powered valuation system provides accurate market-based pricing recommendations."
+		},
+		{
+			"step": "3",
+			"value": "Auto-Generate Listings",
+			"proposition": "Let our AI create compelling product descriptions and optimize your listings across multiple marketplaces."
+		},
+		{
+			"step": "4",
+			"value": "Sell & Ship",
+			"proposition": "Enjoy automated forms, packaging support, and convenient pickup services for a hassle-free selling experience."
+		}
+	],
+	"features": [
+		{
+			"step": "1",
+			"value": "Smart Selling Tools",
+			"proposition": "AI-powered image recognition, automated pricing, and our web extension make listing items effortless."
+		},
+		{
+			"step": "2",
+			"value": "Seamless Transactions",
+			"proposition": "Form automation, packaging support, and pickup services handle the logistics for you."
+		},
+		{
+			"step": "3",
+			"value": "Marketplace Integration",
+			"proposition": "List on multiple platforms including Facebook Marketplace, eBay, Poshmark, and more with one click."
+		}
+	]
 }

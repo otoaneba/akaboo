@@ -15,22 +15,24 @@ body {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 4rem 1rem;
+	padding: 6rem 1rem;
+	position: relative;
 }
 
 .tagline {
 	font-family: "PP Editorial New", serif;
-	font-size: 3.5rem;
-	line-height: 1.2;
+	font-size: 4.5rem;
+	line-height: 1.1;
 	margin-bottom: 1.5rem;
-	max-width: 800px;
+	max-width: 900px;
 }
 
 .action-call {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: #666;
-	max-width: 600px;
-	margin-bottom: 2rem;
+	max-width: 700px;
+	margin-bottom: 3rem;
+	line-height: 1.6;
 }
 
 .openModalBtn {
@@ -70,20 +72,18 @@ body {
 }
 
 .product--tutorial {
-	margin: 0;
-	padding: 2rem;
-	background-color: #fff;
-	border-radius: 1rem;
+	padding: 4rem 2rem;
+	background-color: white;
+	border-radius: 2rem;
+	margin: 2rem 0;
 }
 
 .step--container {
-	flex-direction: column;
-}
-
-.steps {
-	display: flex;
-	margin-right: 2rem;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 3rem;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .step--count {
@@ -161,7 +161,6 @@ body {
 	margin: 0 auto;
 }
 
-/* Add a content wrapper */
 .content-wrapper {
 	max-width: 1440px;
 	width: 100%;
@@ -187,21 +186,78 @@ main {
 
 .tutorial--title {
 	font-family: "PP Editorial New", serif;
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-	text-align: left;
+	font-size: 3rem;
+	margin-bottom: 4rem;
+	text-align: center;
 }
 
 .akatask-section {
-	padding: 4rem 2rem;
+	padding: 6rem 2rem;
 	background-color: #fff;
-	border-radius: 1rem;
+	border-radius: 2rem;
 	margin: 2rem 0;
 }
 
 .akatask-content {
 	max-width: 1200px;
 	margin: 0 auto;
+	text-align: center;
+}
+
+.download-button {
+	background-color: #000;
+	color: #fff;
+	padding: 1rem 3rem;
+	border: none;
+	border-radius: 2rem;
+	font-size: 1.1rem;
+	cursor: pointer;
+	margin: 2rem 0;
+	transition: background-color 0.3s;
+}
+
+.download-button:hover {
+	background-color: #333;
+}
+
+.app-screenshots {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 3rem;
+}
+
+.app-screenshots img {
+	border-radius: 1rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin-top: 4rem;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.benefit-item {
+	background: white;
+	padding: 2rem;
+	border-radius: 1rem;
+	text-align: left;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-item h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #000;
+}
+
+.benefit-item p {
+	color: #666;
+	line-height: 1.5;
 }
 
 /* Add decorative elements */
@@ -229,5 +285,27 @@ main {
 @media (max-width: 768px) {
 	.footer {
 		padding: 1.5rem 1rem;
+	}
+
+	.tagline {
+		font-size: 3rem;
+	}
+
+	.benefits-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.app-screenshots {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.step--container {
+		grid-template-columns: 1fr;
+	}
+
+	main {
+		padding: 2rem 1rem;
+		gap: 4rem;
 	}
 }
