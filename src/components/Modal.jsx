@@ -77,28 +77,28 @@ export default function Modal({
 								<input
 									type="checkbox"
 									name="interest"
-									value="buying"
+									value="ai_listing"
 									onChange={handleChange}
 								/>
-								Buying
+								AI listing assistant
 							</label>
 							<label className="radio-label">
 								<input
 									type="checkbox"
 									name="interest"
-									value="selling"
+									value="one_click"
 									onChange={handleChange}
 								/>
-								Selling
+								One click posting
 							</label>
 							<label className="radio-label">
 								<input
 									type="checkbox"
 									name="interest"
-									value="both"
+									value="shipping"
 									onChange={handleChange}
 								/>
-								Both
+								Hassle-free shipping
 							</label>
 						</fieldset>
 						<button
