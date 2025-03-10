@@ -112,7 +112,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 4rem;
-	margin: 3rem 0;
+	margin: 3rem auto;
+	max-width: 1200px;
 }
 
 .benefit-item {
@@ -124,6 +125,8 @@ main {
 	grid-template-columns: 1fr 1fr;
 	gap: 3rem;
 	align-items: center;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 .benefit-content.image-left {
