@@ -24,7 +24,7 @@ const AkaTask = React.forwardRef((props, ref) => {
 									"_blank"
 								);
 							}}
-							className="download-button"
+							className="cta-button"
 						>
 							📲 Download AkaTask now
 						</button>
