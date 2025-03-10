@@ -1,6 +1,4 @@
 import React from "react";
-import Step from "./Step";
-import data from "../assets/data.json";
 import PropTypes from "prop-types";
 
 const ProductTutorial = React.forwardRef(({ id, setModalOpen }, ref) => {
@@ -8,7 +6,8 @@ const ProductTutorial = React.forwardRef(({ id, setModalOpen }, ref) => {
 		<div className="how-it-works" ref={ref} id={id}>
 			<div className="section-images">
 				<img src="/baby-book.jpg" alt="Parent reading to baby" />
-				<img src="/baby-hike.jpg" alt="Family hiking with baby gear" />
+
+				<img src="/dad-stroller.jpg" alt="Parent with stroller" />
 			</div>
 			<h2>How It Works</h2>
 			<div className="steps-grid">
@@ -36,13 +35,17 @@ const ProductTutorial = React.forwardRef(({ id, setModalOpen }, ref) => {
 				<h2>Why Parents Love Akaboo</h2>
 				<div className="testimonial">
 					<p>
-						💬 "Listing used gear used to be a nightmare—Akaboo made
-						it a breeze! Sold my stroller in 2 days."
+						💬 &ldquo;Listing used gear used to be a
+						nightmare—Akaboo made it a breeze! Sold my stroller in 2
+						days.&rdquo;
 					</p>
 					<cite>– Sarah, NYC</cite>
 				</div>
 				<div className="testimonial">
-					<p>💬 "Love the price estimator! No more guessing."</p>
+					<p>
+						💬 &ldquo;Love the price estimator! No more
+						guessing.&rdquo;
+					</p>
 					<cite>– Jake, Chicago</cite>
 				</div>
 			</div>

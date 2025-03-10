@@ -24,7 +24,6 @@
 }
 
 .modal-title {
-	font-family: "PP Editorial New", serif;
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	text-align: center;
@@ -133,7 +132,6 @@ legend {
 }
 
 .success-message h2 {
-	font-family: "PP Editorial New", serif;
 	font-size: 2rem;
 	margin-bottom: 1rem;
 }
