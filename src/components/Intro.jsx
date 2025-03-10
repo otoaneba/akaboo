@@ -113,33 +113,51 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 				</p>
 				<div className="benefits-with-images">
 					<div className="benefit-item">
-						<img
-							src="/baby-swaddle.jpg"
-							alt="Baby gear"
-							className="benefit-image"
-						/>
-						<div className="benefit">
-							✓ Maximize your resale value
+						<div className="benefit-content image-left">
+							<img
+								src="/baby-swaddle.jpg"
+								alt="Baby gear"
+								className="benefit-image"
+							/>
+							<div className="benefit-text">
+								<h3>Maximize your resale value</h3>
+								<p>
+									Get the best price for your baby gear with
+									our AI-powered pricing recommendations.
+								</p>
+							</div>
 						</div>
 					</div>
 					<div className="benefit-item">
-						<img
-							src="/app-shop.jpg"
-							alt="Shopping app"
-							className="benefit-image"
-						/>
-						<div className="benefit">
-							✓ Effortless listing & automation
+						<div className="benefit-content image-right">
+							<div className="benefit-text">
+								<h3>Effortless listing & automation</h3>
+								<p>
+									Let our AI handle the listings while you
+									focus on what matters most.
+								</p>
+							</div>
+							<img
+								src="/app-shop.jpg"
+								alt="Shopping app"
+								className="benefit-image"
+							/>
 						</div>
 					</div>
 					<div className="benefit-item">
-						<img
-							src="/kid-stroller.jpg"
-							alt="Kid in stroller"
-							className="benefit-image"
-						/>
-						<div className="benefit">
-							✓ Safe, trusted, and sustainable
+						<div className="benefit-content image-left">
+							<img
+								src="/kid-stroller.jpg"
+								alt="Kid in stroller"
+								className="benefit-image"
+							/>
+							<div className="benefit-text">
+								<h3>Safe, trusted, and sustainable</h3>
+								<p>
+									Join a community that values quality and
+									environmental consciousness.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

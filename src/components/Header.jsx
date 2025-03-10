@@ -1,4 +1,3 @@
-import "./Header.css";
 import PropTypes from "prop-types";
 
 function Header({ openModal }) {
