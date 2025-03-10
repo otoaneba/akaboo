@@ -19,9 +19,6 @@ function Header({ openModal }) {
 					<button onClick={() => scrollToSection("intro")}>
 						Home
 					</button>
-					<button onClick={() => scrollToSection("value-prop")}>
-						About
-					</button>
 					<button onClick={() => scrollToSection("buying")}>
 						Services
 					</button>
