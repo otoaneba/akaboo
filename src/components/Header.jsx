@@ -32,7 +32,7 @@ function Header() {
 					className="cta-button"
 					onClick={() => scrollToSection("contact")}
 				>
-					Book Now
+					Join Waitlist
 				</button>
 			</div>
 		</header>

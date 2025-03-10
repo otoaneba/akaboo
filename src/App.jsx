@@ -17,15 +17,17 @@ function App() {
 	return (
 		<div className="app">
 			<Header />
-			<main>
-				<Intro ref={introRef} />
-				<ValueProp ref={valuePropRef} />
-				<div className="tutorials-section">
-					<ProductTutorial process="buying" ref={buyingRef} />
-					<ProductTutorial process="selling" ref={sellingRef} />
-				</div>
-				<AkaTask ref={akaTaskRef} id="akatask" />
-			</main>
+			<div className="content-wrapper">
+				<main>
+					<Intro ref={introRef} />
+					<ValueProp ref={valuePropRef} />
+					<div className="tutorials-section">
+						<ProductTutorial process="buying" ref={buyingRef} />
+						<ProductTutorial process="selling" ref={sellingRef} />
+					</div>
+					<AkaTask ref={akaTaskRef} id="akatask" />
+				</main>
+			</div>
 			<Footer />
 		</div>
 	);
