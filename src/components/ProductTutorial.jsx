@@ -4,11 +4,6 @@ import PropTypes from "prop-types";
 const ProductTutorial = React.forwardRef(({ id, setModalOpen }, ref) => {
 	return (
 		<div className="how-it-works" ref={ref} id={id}>
-			<div className="section-images">
-				<img src="/baby-book.jpg" alt="Parent reading to baby" />
-
-				<img src="/dad-stroller.jpg" alt="Parent with stroller" />
-			</div>
 			<h2>How It Works</h2>
 			<div className="steps-grid">
 				<div className="step">
@@ -47,6 +42,10 @@ const ProductTutorial = React.forwardRef(({ id, setModalOpen }, ref) => {
 						guessing.&rdquo;
 					</p>
 					<cite>– Jake, Chicago</cite>
+				</div>
+				<div className="section-images">
+					<img src="/baby-book.jpg" alt="Parent reading to baby" />
+					<img src="/dad-stroller.jpg" alt="Parent with stroller" />
 				</div>
 			</div>
 		</div>

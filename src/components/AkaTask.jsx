@@ -7,10 +7,7 @@ const AkaTask = React.forwardRef((props, ref) => {
 			<div className="akatask-content">
 				<div className="akatask-grid">
 					<div className="akatask-text">
-						<h2>
-							Unlock Fun and Learning with Our Free AI-Powered
-							Activity Planner!
-						</h2>
+						<h2>Try Our Free Activity Planner</h2>
 						<p>
 							AkaTask is designed to make parenting easier by
 							providing personalized activity suggestions for your
