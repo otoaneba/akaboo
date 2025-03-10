@@ -26,16 +26,9 @@ function App() {
 						setModalOpen={setModalOpen}
 					/>
 					<ProductTutorial
-						process="selling"
 						ref={howItWorksRef}
 						id="how-it-works"
-						title="How It Works"
-					/>
-					<ProductTutorial
-						process="features"
-						ref={featuresRef}
-						id="features"
-						title="Features"
+						setModalOpen={setModalOpen}
 					/>
 					<AkaTask ref={akaTaskRef} id="resources" />
 				</main>
