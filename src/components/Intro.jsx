@@ -81,35 +81,69 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 
 	return (
 		<div className="intro" ref={ref} id="intro">
-			<div className="geometric-pattern"></div>
-			<h1 className="tagline">Transform How You Buy & Sell Baby Gear</h1>
-			<p className="action-call">
-				Join the smart parenting revolution. Use AI-powered tools to buy
-				and sell pre-loved baby gear safely, sustainably, and
-				profitably.
-			</p>
-			<div className="cta-buttons">
+			<div className="hero-section">
+				<div className="hero-content">
+					<h1 className="tagline">
+						Sell Baby Gear. Save Money. Reduce Waste.
+					</h1>
+					<p className="action-call">
+						The smart, easy way to sell used strollers, car seats,
+						and more—powered by AI.
+					</p>
+					<button
+						className="cta-button"
+						onClick={() => setModalOpen(true)}
+					>
+						Join the Waitlist
+					</button>
+				</div>
+				<div className="hero-image">
+					<img src="/dad-stroller.jpg" alt="Parent with stroller" />
+				</div>
+			</div>
+
+			<div className="why-akaboo">
+				<h2>Why Akaboo?</h2>
+				<div className="image-grid">
+					<img
+						src="/baby-swaddle.jpg"
+						alt="Baby gear"
+						className="grid-image"
+					/>
+					<img
+						src="/app-shop.jpg"
+						alt="Shopping app"
+						className="grid-image"
+					/>
+					<img
+						src="/kid-stroller.jpg"
+						alt="Kid in stroller"
+						className="grid-image"
+					/>
+				</div>
+				<p>
+					Parents spend thousands on baby gear that's barely used. We
+					make reselling easy with AI-driven pricing, smart photo
+					tools, and automated listings for marketplaces like
+					Facebook, Craigslist, eBay, Poshmark, OfferUp, and more.
+				</p>
+				<div className="benefits">
+					<div className="benefit">✓ Maximize your resale value</div>
+					<div className="benefit">
+						✓ Effortless listing & automation
+					</div>
+					<div className="benefit">
+						✓ Safe, trusted, and sustainable
+					</div>
+				</div>
 				<button
-					className="openModalBtn"
+					className="cta-button secondary"
 					onClick={() => setModalOpen(true)}
 				>
-					Get Started for Free
+					Join the Waitlist
 				</button>
 			</div>
-			<div className="benefits-grid">
-				<div className="benefit-item">
-					<h3>Sustainability</h3>
-					<p>Give baby gear a second life</p>
-				</div>
-				<div className="benefit-item">
-					<h3>Safety</h3>
-					<p>Verified pre-owned gear</p>
-				</div>
-				<div className="benefit-item">
-					<h3>Savings</h3>
-					<p>Smart deals for smart parents</p>
-				</div>
-			</div>
+
 			<Modal
 				isOpen={modalOpen}
 				closeModal={closeModal}
