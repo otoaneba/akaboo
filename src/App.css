@@ -133,7 +133,7 @@ main {
    ========================================================================== */
 .why-akaboo {
 	background-color: var(--color-background-alt);
-	padding: var(--spacing-3xl) 0;
+	padding: var(--spacing-lg) 0;
 }
 
 .why-akaboo > * {
@@ -166,7 +166,7 @@ main {
 
 .benefits-with-images .cta-button {
 	display: inline-block;
-	margin: var(--spacing-lg) auto;
+	margin: 0 auto;
 	width: fit-content;
 }
 
@@ -224,7 +224,7 @@ main {
    ========================================================================== */
 .how-it-works {
 	background-color: var(--color-background);
-	padding: var(--spacing-2xl) 0;
+	padding: 0;
 	position: relative;
 	overflow: hidden;
 }
@@ -773,7 +773,7 @@ fieldset legend {
    Testimonials Section
    ========================================================================== */
 .testimonials {
-	margin: var(--spacing-2xl) auto;
+	margin: var(--spacing-lg) auto;
 	max-width: var(--content-width);
 	padding: var(--spacing-lg);
 	text-align: center;

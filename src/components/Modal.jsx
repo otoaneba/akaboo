@@ -10,8 +10,15 @@ export default function Modal({
 }) {
 	if (!isOpen) return null;
 
+	// Function to handle clicks outside the modal content
+	const handleBackdropClick = (event) => {
+		if (event.target === event.currentTarget) {
+			closeModal(); // Close the modal if the backdrop is clicked
+		}
+	};
+
 	return (
-		<div className="modal">
+		<div className="modal" onClick={handleBackdropClick}>
 			{submitted ? (
 				<div className="modal-content">
 					<div className="success-message">
