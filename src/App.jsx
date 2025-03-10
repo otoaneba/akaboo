@@ -9,7 +9,6 @@ import AkaTask from "./components/AkaTask";
 function App() {
 	const introRef = useRef(null);
 	const howItWorksRef = useRef(null);
-	const featuresRef = useRef(null);
 	const akaTaskRef = useRef(null);
 
 	const [modalOpen, setModalOpen] = useState(false);

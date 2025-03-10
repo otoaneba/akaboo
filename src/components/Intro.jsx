@@ -15,7 +15,6 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 		zipCode: "",
 		ageRange: "",
 		interest: [],
-		categories: [],
 	});
 
 	const handleChange = (e) => {
@@ -68,7 +67,6 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 				zipCode: "",
 				ageRange: "",
 				interest: [],
-				categories: [],
 			});
 			setLoading(false);
 		}
@@ -98,42 +96,69 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 					</button>
 				</div>
 				<div className="hero-image">
-					<img src="/dad-stroller.jpg" alt="Parent with stroller" />
+					<img
+						src="/baby-hike.jpg"
+						alt="Family hiking with baby gear"
+					/>
 				</div>
 			</div>
 
 			<div className="why-akaboo">
 				<h2>Why Akaboo?</h2>
-				<div className="image-grid">
-					<img
-						src="/baby-swaddle.jpg"
-						alt="Baby gear"
-						className="grid-image"
-					/>
-					<img
-						src="/app-shop.jpg"
-						alt="Shopping app"
-						className="grid-image"
-					/>
-					<img
-						src="/kid-stroller.jpg"
-						alt="Kid in stroller"
-						className="grid-image"
-					/>
-				</div>
 				<p>
-					Parents spend thousands on baby gear that's barely used. We
-					make reselling easy with AI-driven pricing, smart photo
-					tools, and automated listings for marketplaces like
+					Parents spend thousands on baby gear that&apos;s barely
+					used. We make reselling easy with AI-driven pricing, smart
+					photo tools, and automated listings for marketplaces like
 					Facebook, Craigslist, eBay, Poshmark, OfferUp, and more.
 				</p>
-				<div className="benefits">
-					<div className="benefit">✓ Maximize your resale value</div>
-					<div className="benefit">
-						✓ Effortless listing & automation
+				<div className="benefits-with-images">
+					<div className="benefit-item">
+						<div className="benefit-content image-left">
+							<img
+								src="/baby-swaddle.jpg"
+								alt="Baby gear"
+								className="benefit-image"
+							/>
+							<div className="benefit-text">
+								<h3>Maximize your resale value</h3>
+								<p>
+									Get the best price for your baby gear with
+									our AI-powered pricing recommendations.
+								</p>
+							</div>
+						</div>
 					</div>
-					<div className="benefit">
-						✓ Safe, trusted, and sustainable
+					<div className="benefit-item">
+						<div className="benefit-content image-right">
+							<div className="benefit-text">
+								<h3>Effortless listing & automation</h3>
+								<p>
+									Let our AI handle the listings while you
+									focus on what matters most.
+								</p>
+							</div>
+							<img
+								src="/app-shop.jpg"
+								alt="Shopping app"
+								className="benefit-image"
+							/>
+						</div>
+					</div>
+					<div className="benefit-item">
+						<div className="benefit-content image-left">
+							<img
+								src="/kid-stroller.jpg"
+								alt="Kid in stroller"
+								className="benefit-image"
+							/>
+							<div className="benefit-text">
+								<h3>Safe, trusted, and sustainable</h3>
+								<p>
+									Join a community that values quality and
+									environmental consciousness.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<button
