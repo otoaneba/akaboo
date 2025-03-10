@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import Intro from "./components/Intro";
 import { Footer } from "./components/Footer";
@@ -14,12 +14,20 @@ function App() {
 	const sellingRef = useRef(null);
 	const akaTaskRef = useRef(null);
 
+	const [modalOpen, setModalOpen] = useState(false);
+
+	const openModal = () => setModalOpen(true);
+
 	return (
 		<div className="app">
-			<Header />
+			<Header openModal={openModal} />
 			<div className="content-wrapper">
 				<main>
-					<Intro ref={introRef} />
+					<Intro
+						ref={introRef}
+						modalOpen={modalOpen}
+						setModalOpen={setModalOpen}
+					/>
 					<ValueProp ref={valuePropRef} />
 					<div className="tutorials-section">
 						<ProductTutorial process="buying" ref={buyingRef} />

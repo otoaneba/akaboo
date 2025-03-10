@@ -4,9 +4,9 @@ import { userCollection, app } from "../firebase";
 import "firebaseui/dist/firebaseui.css";
 import { getFunctions, httpsCallable } from "firebase/functions";
 import Modal from "./Modal";
+import PropTypes from "prop-types";
 
-const Intro = React.forwardRef((props, ref) => {
-	const [modalOpen, setModalOpen] = React.useState(false);
+const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 	const [formSubmitted, setFormSubmitted] = React.useState(false);
 	const [loading, setLoading] = React.useState(false);
 	const [formData, setFormData] = React.useState({
@@ -109,6 +109,11 @@ const Intro = React.forwardRef((props, ref) => {
 		</div>
 	);
 });
+
+Intro.propTypes = {
+	modalOpen: PropTypes.bool.isRequired,
+	setModalOpen: PropTypes.func.isRequired,
+};
 
 Intro.displayName = "Intro";
 

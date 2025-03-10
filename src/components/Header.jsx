@@ -1,6 +1,7 @@
 import "./Header.css";
+import PropTypes from "prop-types";
 
-function Header() {
+function Header({ openModal }) {
 	const scrollToSection = (sectionId) => {
 		const element = document.getElementById(sectionId);
 		if (element) {
@@ -28,15 +29,16 @@ function Header() {
 						Resources
 					</button>
 				</nav>
-				<button
-					className="cta-button"
-					onClick={() => scrollToSection("contact")}
-				>
+				<button className="cta-button" onClick={openModal}>
 					Join Waitlist
 				</button>
 			</div>
 		</header>
 	);
 }
+
+Header.propTypes = {
+	openModal: PropTypes.func.isRequired,
+};
 
 export default Header;
