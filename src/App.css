@@ -671,20 +671,22 @@ fieldset legend {
 	}
 
 	/* Benefits Section */
+	.benefit-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.benefit-content {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-			"image"
-			"text";
-		gap: var(--spacing-md);
+		display: block;
+	}
+
+	.benefit-image {
+		display: none;
 	}
 
 	.benefit-text {
 		text-align: center;
-	}
-
-	.benefit-image {
-		height: 250px;
 	}
 
 	/* AkaTask Section */
