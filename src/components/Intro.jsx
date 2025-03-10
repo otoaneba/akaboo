@@ -80,7 +80,7 @@ const Intro = React.forwardRef(({ modalOpen, setModalOpen }, ref) => {
 	};
 
 	return (
-		<div className="intro" ref={ref}>
+		<div className="intro" ref={ref} id="intro">
 			<div className="geometric-pattern"></div>
 			<h1 className="tagline">
 				Transform Your Life With The Guidance Of A Certified Life Coach
